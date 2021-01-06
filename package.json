@@ -1,0 +1,13 @@
+{
+  "name": "bbfc.dev",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "license": "CC BY-NC-SA 4.0",
+  "devDependencies": {
+    "vitepress": "^0.10.4"
+  }
+}
