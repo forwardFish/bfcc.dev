@@ -86,7 +86,7 @@
               开发者SDK
             </div>
             <div class="tool-des">
-              区块链编程的软件开发工具包
+              区块链编程软件开发工具包
             </div>
           </div>
           <div class="tool-item">
@@ -182,6 +182,10 @@
   --docsearch-primary-color: var(--docsearch-primary-color) !important;
   --docsearch-highlight-color: var(--docsearch-primary-color) !important;
 }
+
+ol, p, ul {
+    overflow-x: auto;
+}
 p > img {
   display: block;
   margin: 0 auto;
@@ -233,7 +237,6 @@ footer {
 }
 section {
   height: 480px;
-  max-height: 480px;
   background-color: rgb(250, 250, 250);
 }
 /* -----main global end------- */
@@ -372,7 +375,6 @@ section {
 }
 
 .detail-item .detail-des {
-  width: 205px;
   font-family: PingFangSC-Regular;
   font-size: 14px;
   color: #131313;
@@ -459,7 +461,6 @@ section {
 }
 
 .tool-item .tool-des {
-  width: 205px;
   font-family: PingFangSC-Regular;
   font-size: 14px;
   color: #131313;
@@ -589,4 +590,83 @@ footer {
   text-align: right;
   text-decoration: none;
 }
+
+@media screen and (min-width:320px) and (max-width:900px){
+  section,footer{
+    height: fit-content;
+    padding: 8px;
+    padding-bottom: 30px;
+  }
+  /** forest&developer-tool begin **/
+  .forest .detail,.developer-tool .tool{
+    flex-wrap:wrap;
+  }
+
+  .detail .detail-item ,.tool .tool-item{
+    width: 50%;
+  }
+  /** forest&developer-tool end***/
+
+  /** .developer-group begin **/
+  .developer-group .content{
+    flex-flow: column;
+    padding: 15px;
+  }
+  .developer-group-left,
+  .developer-group-right{
+    width: 100%;
+  }
+
+  .developer-group-left div{
+    margin-left: 0px;
+  }
+
+  .developer-group-left .description{
+    width:100%;
+  }
+  .developer-group-right .img{
+    width:100%;
+    height:fit-content;
+    margin: 10px auto;
+  }
+  /** .developer-group begin **/
+
+  /** recommend begin**/
+  .recommend .recommend-articles{
+    flex-wrap:wrap;
+    width:100%;
+  }
+  .recommend-articles .recommend-item{
+    width:50%;
+  }
+}
+
+@media (max-width:480px){
+  .developer-group .content{
+    flex-direction:column-reverse;
+  }
+  .developer-group-left .title{
+    margin: 10px 0 5px;
+  }
+  .recommend .recommend-articles{
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recommend-articles .recommend-item{
+    width:100%;
+    margin: 10px 0 40px;
+  }
+
+  .recommend-item .img-container{
+    margin-bottom:10px;
+  }
+  .recommend .more{
+    margin-top:0px;
+  }
+}
+
+  /** recommend end**/
+
 </style>
