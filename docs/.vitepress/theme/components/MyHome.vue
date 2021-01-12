@@ -123,8 +123,7 @@
               生物链林的技术特性和优势
             </div>
             <div class="recommend-item-des">
-              两大特性及优势：“完全自主化研发的区块链底层基础设施” 和
-              “移动区块链赋能实体企业数字化转型”...
+              生物链林是完全国产自有知识产权的移动端区块链底层基础设施，也是全球首个移动端区块链网络，拥有独特的基于用户参与度的共识机制，以及自由生长的跨链技术等特性。
             </div>
           </a>
           <a class="recommend-item" href="/blog/05">
@@ -183,8 +182,10 @@
   --docsearch-highlight-color: var(--docsearch-primary-color) !important;
 }
 
-ol, p, ul {
-    overflow-x: auto;
+ol,
+p,
+ul {
+  overflow-x: auto;
 }
 p > img {
   display: block;
@@ -591,82 +592,84 @@ footer {
   text-decoration: none;
 }
 
-@media screen and (min-width:320px) and (max-width:900px){
-  section,footer{
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  section,
+  footer {
     height: fit-content;
     padding: 8px;
     padding-bottom: 30px;
   }
   /** forest&developer-tool begin **/
-  .forest .detail,.developer-tool .tool{
-    flex-wrap:wrap;
+  .forest .detail,
+  .developer-tool .tool {
+    flex-wrap: wrap;
   }
 
-  .detail .detail-item ,.tool .tool-item{
+  .detail .detail-item,
+  .tool .tool-item {
     width: 50%;
   }
   /** forest&developer-tool end***/
 
   /** .developer-group begin **/
-  .developer-group .content{
+  .developer-group .content {
     flex-flow: column;
     padding: 15px;
   }
   .developer-group-left,
-  .developer-group-right{
+  .developer-group-right {
     width: 100%;
   }
 
-  .developer-group-left div{
+  .developer-group-left div {
     margin-left: 0px;
   }
 
-  .developer-group-left .description{
-    width:100%;
+  .developer-group-left .description {
+    width: 100%;
   }
-  .developer-group-right .img{
-    width:100%;
-    height:fit-content;
+  .developer-group-right .img {
+    width: 100%;
+    height: fit-content;
     margin: 10px auto;
   }
   /** .developer-group begin **/
 
   /** recommend begin**/
-  .recommend .recommend-articles{
-    flex-wrap:wrap;
-    width:100%;
+  .recommend .recommend-articles {
+    flex-wrap: wrap;
+    width: 100%;
   }
-  .recommend-articles .recommend-item{
-    width:50%;
+  .recommend-articles .recommend-item {
+    width: 50%;
   }
 }
 
-@media (max-width:480px){
-  .developer-group .content{
-    flex-direction:column-reverse;
+@media (max-width: 480px) {
+  .developer-group .content {
+    flex-direction: column-reverse;
   }
-  .developer-group-left .title{
+  .developer-group-left .title {
     margin: 10px 0 5px;
   }
-  .recommend .recommend-articles{
+  .recommend .recommend-articles {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
   }
 
-  .recommend-articles .recommend-item{
-    width:100%;
+  .recommend-articles .recommend-item {
+    width: 100%;
     margin: 10px 0 40px;
   }
 
-  .recommend-item .img-container{
-    margin-bottom:10px;
+  .recommend-item .img-container {
+    margin-bottom: 10px;
   }
-  .recommend .more{
-    margin-top:0px;
+  .recommend .more {
+    margin-top: 0px;
   }
 }
 
-  /** recommend end**/
-
+/** recommend end**/
 </style>
