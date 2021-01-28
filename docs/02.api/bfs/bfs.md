@@ -2,7 +2,7 @@
 
 ## 1. 描述
 
-​		封装了bfs平台层暴露的方法。
+​封装了bfs平台层暴露的方法。
 
 ## 2. 方法
 
@@ -10,8 +10,8 @@
 
   - **参数说明**
     - brl:  应用打开路径
-  - **返回值**： 用于两个应用间双工通信的端口
 
+  - **返回值**： 用于两个应用间双工通信的端口
   ```javascript
   import "@bfs/bfchain-runtime-typings";
   const bfs = bfsprocess.import("bfs");

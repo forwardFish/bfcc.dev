@@ -1,7 +1,6 @@
 # bfsprocess模块
 
 ## 1. 描述
-
 ​		进程的实例,通过该实例可以导入模块,在应用中使用，如"bfs", "channel"等模块。
 
 ## 2. 方法
@@ -9,14 +8,12 @@
 - **`import<T extends ImportNames>(name: T):Module<T>`**
   - **参数说明**
     - name: 模块名称
+
   - **返回值**类型
     - `Module<T>`
 
 ## 3. 属性
-
-- **message**
-
-- **onGatewayBrl:** 网关事件触发器，所有openBrl的请求都会发送给该事件，通过attach捕获事件
+- **onGatewayBrl：** 网关事件触发器，所有openBrl的请求都会发送给该事件，通过attach捕获事件
 
   ```javascript
   bfsprocess.onGatewayBrl.attach(info=>{
@@ -31,7 +28,7 @@
 
   
 
-- **onLinkedBrl**
+- **onLinkedBrl：** 应用启动事件触发器
 
   ```javascript
   bfsprocess.onLinkedBrl.attach(linked=>{
