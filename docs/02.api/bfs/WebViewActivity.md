@@ -16,7 +16,7 @@
     - ActivityCtor: 页面构造函数
   - **返回值**： 双工通信的端口
 
-## 3. DomAcivity 类
+## 3. WebViewAcivity 类
 
 - **方法**
   - **open()**  打开页面
@@ -76,7 +76,7 @@ declare namespace BFS.Lib {
 
 ```
 
-### 5. 示例
+## 5. 示例
 
 ```javascript
 import "@bfs/bfchain-runtime-typings";
