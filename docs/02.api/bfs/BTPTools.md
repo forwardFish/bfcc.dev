@@ -5,10 +5,10 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
 
 ## 2. 方法
 
-- BTPTools.parseHead(commandMessage: string): { [key: string]: string}
+- **BTPTools.parseHead(commandMessage: string): { [key: string]: string}**
     - 参数说明：
         ```
-        commandMessage: Tui发送过来的协议
+        commandMessage  Tui发送过来的协议
         ```
     
     - 描述： 解析指令消息的头部信息
@@ -34,10 +34,10 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
         ```
     
     
-- BTPTools.parseBodyByBTPString(commandMessage: string): { [key: string]: string}
+- **BTPTools.parseBodyByBTPString(commandMessage: string): { [key: string]: string}**
     - 参数说明：
         ```
-        commandMessage: Tui发送过来的协议
+        commandMessage  Tui发送过来的协议
         ```
     
     - 描述： 解析指令消息的主体信息
@@ -60,10 +60,10 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
         }
         ```
     
-- BTPTools.parseCommandIDByCommandMessage(commandMessage: string): number
+- **BTPTools.parseCommandIDByCommandMessage(commandMessage: string): number**
     - 参数说明：
         ```
-        commandMessage: Tui发送过来的协议
+        commandMessage  Tui发送过来的协议
         ```
     - 描述: 从指令消息中解析出commandID
         ```
@@ -81,7 +81,7 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
         161173507822
         ```
     
-- BTPTools.createResMessageNormal(content: string, commandID: number, level: number): string
+- **BTPTools.createResMessageNormal(content: string, commandID: number, level: number): string**
 
     - 参数说明：
 
@@ -109,7 +109,7 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
 
       
 
-- BTPTools.createResMessageNormalErr(content: string, commandID: number): string
+- **BTPTools.createResMessageNormalErr(content: string, commandID: number): string**
     - 参数说明：
 
       ```
@@ -136,7 +136,7 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
 
       
 
-- BTPTools.createResMessageLoading(commandID: number): string
+- **BTPTools.createResMessageLoading(commandID: number): string**
     - 参数说明：
 
       ```
@@ -163,7 +163,7 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
 
       
 
-- BTPTools.createResMessageTable(conent: string[][], commandID: number): string
+- **BTPTools.createResMessageTable(conent: string[][], commandID: number): string**
     - 参数说明：
 
         ```
@@ -187,7 +187,7 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
         --------end` 
         ```
 
-- BTPTools.createEntryInputStateNormalProtocol(commandID: number): string
+- **BTPTools.createEntryInputStateNormalProtocol(commandID: number): string**
     
     - 参数说明：
     
@@ -211,6 +211,6 @@ BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
         --------end` 
         ```
 
-- 备注说明：
+- **备注说明：**
     
     - 在发送后TUI 会忽略之后发送的相同commandID的消息
