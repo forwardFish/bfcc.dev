@@ -2,14 +2,9 @@
 
 ## 1. 描述
 
-​		用于注册，创建bfs webview页面。
+​		用于构建
 
 ## 2. 方法
-
-- **registerActivity(lifeCycle: DomActivity.ActivityLifeCycle)**
-  - **参数说明**
-    - lifeCycle:  生命周期
-  - **返回值**： DomActivity.Ctor
 - **createAcivity(activityName: string, ActivityCtor: AC = (DomActivity as unknown) as AC)** 用于创建一个页面实例
   - **参数说明**
     - activityName: 页面名称
