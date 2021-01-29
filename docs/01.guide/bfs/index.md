@@ -26,7 +26,7 @@
 
     - **TUI是什么？**
     
-        TUI是一个命令行界面，用于与BFS系统进行交互，可以类比windows上的cmd终端，linux shell,可以通过该终端调用BFS系统功能，也可通过BFS暴露的接口进行自定义指令，并按照指定的协议控制TUI状态，从而实现同BFS交互（详见BFS-TUI通信协议说明）。
+        TUI(Text User Interface)是一个命令行界面，用于与BFS系统进行交互，可以类比windows上的cmd终端，linux上的shell。可以通过该命令行界面调用BFS系统功能，也可通过BFS暴露的接口进行自定义指令，并按照指定的协议控制TUI状态，从而实现同BFS交互（详见BFS-TUI通信协议说明）。
 
     - **自定义指令**
         
