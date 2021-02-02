@@ -1,9 +1,9 @@
-# BTPTools
+## BTPTools
 
-## 1. 描述
+### 1. 描述
 BFS-TUI通信协议生成与解析工具[bfsprocess.import('bfs').BTPTools]
 
-## 2. 方法
+### 2. 方法
 
 - **BTPTools.parseHead(commandMessage: string): { [key: string]: string}**
     - 参数说明：

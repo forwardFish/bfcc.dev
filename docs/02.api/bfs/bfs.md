@@ -2,14 +2,14 @@
 
 ## 1. 描述
 
-​封装了bfs平台层暴露的方法。
+​封装了BFS系统暴露的方法。
 
 ## 2. 方法
 
 - **`openBrl(brl: string): PromiseLike<BFS.Channel.Port | undefined>`**
 
   - **参数说明**
-    - brl:  应用打开路径
+    - brl:  应用的打开路径
 
   - **返回值**： 用于两个应用间双工通信的端口
   ```javascript

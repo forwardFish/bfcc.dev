@@ -30,19 +30,35 @@ module.exports = {
   ],
   '/02.api/bfs/': [
     {
-      text: 'BFS 接口列表',
+      text: 'BFS系统API',
       children: [
         { text: 'bfs', link: '/02.api/bfs/bfs' },
+        { text: 'evt', link: '/02.api/bfs/evt' },
         {
           text: 'bfsprocess',
           link: '/02.api/bfs/bfsprocess'
         },
-        { text: 'BTP数据传输协议', link: '/02.api/bfs/BTP' },
-        { text: 'BTPTools', link: '/02.api/bfs/BTPTools' },
-        { text: 'DomActivity', link: '/02.api/bfs/DomActivity' },
-        { text: 'evt', link: '/02.api/bfs/evt' },
+        { text: 'link', link: '/02.api/bfs/link' },
+        { text: 'file_system', link: '/02.api/bfs/file_system' },
         { text: 'openBrl', link: '/02.api/bfs/openBrl' },
         { text: 'WebViewActivity', link: '/02.api/bfs/WebViewActivity' }
+      ]
+    },
+    {
+      text: 'BFS应用',
+      children: [
+        { text: 'TUI', link: '/02.api/bfs/BTP'},
+        { text: 'BFChain', 
+          children: [
+            { text: 'borker', link: '/02.api/bfs/borker' },
+          ]
+        },
+        { text: 'FinChain'},
+        // children: [
+        //   { text: 'BTP数据传输协议', link: '/02.api/bfs/BTP' },
+        //   { text: 'BTPTools', link: '/02.api/bfs/BTPTools' },
+        // ]
+        // { text: 'TUI', link: '/02.api/bfs/DomActivity' },
       ]
     }
   ]

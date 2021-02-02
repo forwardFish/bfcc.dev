@@ -2,21 +2,16 @@
 
 ## 1. 描述
 
-​		用于注册，创建bfs webview页面。
+​		用于构建
 
 ## 2. 方法
-
-- **registerActivity(lifeCycle: DomActivity.ActivityLifeCycle)**
-  - **参数说明**
-    - lifeCycle:  生命周期
-  - **返回值**： DomActivity.Ctor
 - **createAcivity(activityName: string, ActivityCtor: AC = (DomActivity as unknown) as AC)** 用于创建一个页面实例
   - **参数说明**
     - activityName: 页面名称
     - ActivityCtor: 页面构造函数
   - **返回值**： 双工通信的端口
 
-## 3. DomAcivity 类
+## 3. WebViewAcivity 类
 
 - **方法**
   - **open()**  打开页面
@@ -76,7 +71,7 @@ declare namespace BFS.Lib {
 
 ```
 
-### 5. 示例
+## 5. 示例
 
 ```javascript
 import "@bfs/bfchain-runtime-typings";
