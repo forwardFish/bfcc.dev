@@ -4,15 +4,15 @@ module.exports = [
   {
     text: '教程',
     items: [
-      { text: 'PC', link: '/01.guide/pc/', activeMatch: '^/01.guide/pc/' },
-      { text: 'BFS', link: '/01.guide/bfs/' }
+      { text: 'PC', link: '/guide/pc/', activeMatch: '^/guide/pc/' },
+      { text: 'BFS', link: '/guide/bfs/' }
     ]
   },
   {
     text: 'API 参考',
     items: [
-      { text: 'PC', link: '/02.api/pc/1.0.html', activeMatch: '^/02.api/pc/' },
-      { text: 'BFS', link: '/02.api/bfs/bfs', activeMatch: '^/02.api/bfs/' }
+      { text: 'PC', link: '/api/pc/1-0', activeMatch: '^/api/pc/' },
+      { text: 'BFS', link: '/api/bfs/bfs', activeMatch: '^/api/bfs/' }
     ]
   },
   { text: '社区问答', link: 'https://qa.bfcc.dev/' }
