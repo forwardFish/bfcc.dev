@@ -17,7 +17,7 @@
 
   ```javascript
   bfsprocess.onGatewayBrl.attach(info=>{
-      const {brl, offer} => info;
+      const {brl, offer} = info;
       // 根据info.brl 的信息进行判断是否要举牌处理该请求
       if (brl.protocal === 'upgrade') {
           offer(1); // 表示举牌处理这个请求
@@ -117,7 +117,7 @@ namespace BFS {
 // 示例1：
 import "@bfs/bfchain-runtime-typings";
 bfsprocess.onGatewayBrl.attach(info=>{
-    const {brl, offer} => info;
+    const {brl, offer} = info;
     info.offer(1); // 表示举牌处理这个请求
 })
 bfsprocess.onLinkedBrl.attach(linked=>{
