@@ -2,7 +2,7 @@
 ## **1. BFS 概述**
 - ### BFS是什么？
 
-    BFS，全称为Bioforest Chain System，Bioforest为Biology Forest的全称，BFS意为生物链林系统。它是本能实验室自主研发，基于TypeScript语言，国产自主可控的区块链底层技术。系统在设计上像有生命的生物群，生成的链更像是生物链，再加上其内在的跨链特性，可以让所有符合共识机制的链接入并成为一个整体，直观体验就像是组成一片有生命并且可以自我生长的森林。
+    BFS，全称为Bioforest Chain System，Bioforest为Biology Forest的全称，BFS意为生物链林系统。它是本能实验室自主研发，国产自主可控的区块链底层技术，打破了传统区块链技术必须运行在x86 PC上的约束，将区块链的应用范围扩大到了手机，平板电脑、智能穿戴设备以及物联网设备平台上。系统在设计上像有生命的生物群，生成的链更像是生物链，再加上其内在的跨链特性，可以让所有符合共识机制的链接入并成为一个整体，直观体验就像是组成一片有生命并且可以自我生长的森林。
     
     > `注意：`BFS目前处于持续迭代阶段，可能会出现架构调整现象，如在使用中遇到问题，您可以在[GitHub](https://github.com/BioforestChain/bfcc.dev/issues/new)中进行反馈。
 
@@ -27,7 +27,7 @@
 
     - **TUI是什么？**
     
-        TUI(Text User Interface)是一个命令行界面，用于与BFS系统进行交互，可以类比windows上的cmd终端，linux上的shell。可以通过该命令行界面调用BFS系统功能，也可通过BFS暴露的接口进行自定义指令，并按照指定的协议控制TUI状态，从而实现同BFS交互（详见BFS-TUI通信协议说明）。
+        TUI(Text User Interface)是一个BFS内置的命令行界面，用于与BFS系统进行交互，可以类比windows上的cmd终端，linux上的shell。可以通过该命令行界面调用BFS系统功能，也可通过BFS暴露的接口进行自定义指令，并按照指定的协议控制TUI状态，从而实现同BFS交互（详见BFS-TUI通信协议说明）。
 
     - **自定义指令**
       
@@ -37,26 +37,54 @@
     
 ## **2. 快速开始**
 
-- ### 下载 BFS SDK 
-    [完善中]
-    
+- ### 安装 BFS SDK 
+    在本地系统终端（如Windows下的cmd,powershell, Mac下的terminal, linux下的bash,如无特殊说明下文中的"本地系统终端"均为此义）运行如下命令来安装bfs-sdk
+    ```
+    > npm install bfs-sdk -g
+    ```
+- ### 安装 bfsp (BFS辅助工具)
+    ```
+    > npm install bfsp -g
+    ```
 - ### 运行 BFS SDK
-    [完善中]
+    在本地系统终端运行如下命令来启动bfs
+    ```
+    > bfs
+    ```
     
 - ### 创建工程
-    详见4.示例
-    
+    在本地系统终端使用bfsp创建工程
+    ```
+    > bfsp create projectName
+    ```
+- ### 安装依赖
+    在本地系统终端进入到新创建的工程，并安装依赖
+    ```
+    > cd projectName
+    > bfsp init
+    ```
+
 - ### 开发应用
     详见4.示例
     
-- ### 编译/运行应用
-    [完善中]]
-    
+- ### 构建应用
+    本地系统终端内，在当前应用目录下执行
+    ```
+    > bfsp bundle
+    ```
+    生成projectName.napp存在本地
+- ### 安装应用
+    启动BFS，通过BFS命令行即TUI,启动安装程序界面。
+    以下命令在TUI中执行
+    ```
+    > core install
+    ```
+    在安装程序界面，选择本地的projectName.napp文件，然后点击安装按钮，完成安装操作。
+
 - ### 发布应用
-    [完善中]
+    应用市场即将上线...
 
 ## **3. 工程文件目录结构说明**
-- ### 工程文件的规则
 
 
 - ### 工程文件目录结构
