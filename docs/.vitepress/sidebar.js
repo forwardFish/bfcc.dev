@@ -47,12 +47,12 @@ module.exports = {
     {
       text: 'BFS应用',
       children: [
-        { text: 'TUI', link: '/api/bfs/BTP' },
-        {
-          text: 'BFChain',
-          children: [{ text: 'borker', link: '/api/bfs/borker' }]
-        },
-        { text: 'FinChain' }
+        { text: 'TUI', link: '/api/bfs/BTP' }
+        // {
+        //   text: 'BFChain',
+        //   children: [{ text: 'borker', link: '/api/bfs/borker' }]
+        // }
+        // { text: 'FinChain' }
         // children: [
         //   { text: 'BTP数据传输协议', link: '/api/bfs/BTP' },
         //   { text: 'BTPTools', link: '/api/bfs/BTPTools' },
