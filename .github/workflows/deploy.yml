@@ -33,7 +33,7 @@ jobs:
 #           script: ./publish.sh
 
       - name: echo
-        run: echo ${{ github.job }}
+        run: echo ${{ github.action_path }}
   
 #       - name: feishu bot
 #         uses: wangsijie/feishu-bot@v1
