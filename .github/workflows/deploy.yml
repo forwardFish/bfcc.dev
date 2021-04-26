@@ -23,17 +23,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: login-to-server
-        uses: cross-the-world/ssh-pipeline@v1.2.0
-        with:
-          host: bfcc.dev
-          port: 22222
-          user: root
-          key: ${{ secrets.BFCC_SERVER_KEY }}
-          script: ./publish.sh
+#       - name: login-to-server
+#         uses: cross-the-world/ssh-pipeline@v1.2.0
+#         with:
+#           host: bfcc.dev
+#           port: 22222
+#           user: root
+#           key: ${{ secrets.BFCC_SERVER_KEY }}
+#           script: ./publish.sh
 
       - name: echo
-        run: echo ${{ steps.step_name.outputs.url_output }}
+        run: echo ${{ github.job }}
   
 #       - name: feishu bot
 #         uses: wangsijie/feishu-bot@v1
