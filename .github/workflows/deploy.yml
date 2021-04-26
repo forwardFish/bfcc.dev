@@ -36,7 +36,7 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
           RUN_ID: ${{github.run_id}}
-          ACTION_URL: ${{github.repository.url + github.run_id}}
+          ACTION_URL: ${{github.run_id}}${{github.repository.url}}
         run: echo $ACTION_URL
 
   
