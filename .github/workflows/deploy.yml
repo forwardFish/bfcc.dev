@@ -18,32 +18,24 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: cross-the-world/ssh-pipeline@v1.2.0
-    env:
-      host: bfcc.dev
-      port: 22222
-      user: root
-      key: ${{ secrets.BFCC_SERVER_KEY }}
-      script: ./publish.sh
+    runs-on: ubuntu-latest
 
-#     # Steps represent a sequence of tasks that will be executed as part of the job
-#     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - name: login-to-server
-#         uses: cross-the-world/ssh-pipeline@v1.2.0
-#         with:
-#           host: bfcc.dev
-#           port: 22222
-#           user: root
-#           key: ${{ secrets.BFCC_SERVER_KEY }}
-#           script: ./publish.sh
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: login-to-server
+        uses: cross-the-world/ssh-pipeline@v1.2.0
+        with:
+          host: bfcc.dev
+          port: 22222
+          user: root
+          key: ${{ secrets.BFCC_SERVER_KEY }}
+          script: ./publish.sh
 
-#       # Runs a single command using the runners shell
-#       - name: Run a one-line script
-#         run: echo Hello, world!
-
-#       # Runs a set of commands using the runners shell
-#       - name: Run a multi-line script
-#         run: |
-#           echo Add other actions to build,
-#           echo test, and deploy your project.
+      - name: feishu bot
+        uses: wangsijie/feishu-bot@v1
+        with:
+          version: 2
+          uuid: e3fdc3fd-b741-483f-b655-1c71e0155652
+          text: nginx 更新成功 @胡东阳 可以刷新 CDN 啦 ${{ steps.step_name.outputs.url_output }}
+  
