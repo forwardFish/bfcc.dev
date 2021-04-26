@@ -33,7 +33,10 @@ jobs:
 #           script: ./publish.sh
 
       - name: echo
-        run: echo ${{ github.action_path }}
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
   
 #       - name: feishu bot
 #         uses: wangsijie/feishu-bot@v1
