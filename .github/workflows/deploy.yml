@@ -35,7 +35,8 @@ jobs:
       - name: echo
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
+          RUN_ID: ${{github.run_id}}
+        run: echo $RUN_ID
 
   
 #       - name: feishu bot
