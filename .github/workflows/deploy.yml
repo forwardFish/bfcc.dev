@@ -32,10 +32,13 @@ jobs:
           key: ${{ secrets.BFCC_SERVER_KEY }}
           script: ./publish.sh
 
-      - name: feishu bot
-        uses: wangsijie/feishu-bot@v1
-        with:
-          version: 2
-          uuid: e3fdc3fd-b741-483f-b655-1c71e0155652
-          text: nginx 更新成功 @胡东阳 可以刷新 CDN 啦 ${{ steps.step_name.outputs.url_output }}
+      - name: echo
+        run: echo ${{ steps.step_name.outputs.url_output }}
+  
+#       - name: feishu bot
+#         uses: wangsijie/feishu-bot@v1
+#         with:
+#           version: 2
+#           uuid: e3fdc3fd-b741-483f-b655-1c71e0155652
+#           text: nginx 更新成功 @胡东阳 可以刷新 CDN 啦 ${{ steps.step_name.outputs.url_output }}
   
