@@ -23,27 +23,27 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - name: login-to-server
-#         uses: cross-the-world/ssh-pipeline@v1.2.0
-#         with:
-#           host: bfcc.dev
-#           port: 22222
-#           user: root
-#           key: ${{ secrets.BFCC_SERVER_KEY }}
-#           script: ./publish.sh
+      - name: login-to-server
+        uses: cross-the-world/ssh-pipeline@v1.2.0
+        with:
+          host: bfcc.dev
+          port: 22222
+          user: root
+          key: ${{ secrets.BFCC_SERVER_KEY }}
+          script: ./publish.sh
 
-      - name: echo
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-          RUN_ID: ${{github.run_id}}
-          ACTION_URL: ${{github.run_id}}${{github.repository.url}}
-        run: echo $ACTION_URL
+#       - name: echo
+#         env:
+#           GITHUB_CONTEXT: ${{ toJSON(github) }}
+#           RUN_ID: ${{github.run_id}}
+#           ACTION_URL: ${{github.run_id}} + ${{github.repository.url}}/runs/2438059681?check_suite_focus=true
+#         run: echo $ACTION_URL
 
   
-#       - name: feishu bot
-#         uses: wangsijie/feishu-bot@v1
-#         with:
-#           version: 2
-#           uuid: e3fdc3fd-b741-483f-b655-1c71e0155652
-#           text: nginx 更新成功 @胡东阳 可以刷新 CDN 啦 ${{ steps.step_name.outputs.url_output }}
+      - name: feishu bot
+        uses: wangsijie/feishu-bot@v1
+        with:
+          version: 2
+          uuid: e3fdc3fd-b741-483f-b655-1c71e0155652
+          text: nginx 更新成功 @胡东阳 可以刷新 CDN 啦
   
