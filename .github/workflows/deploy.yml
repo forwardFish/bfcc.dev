@@ -30,7 +30,7 @@ jobs:
           port: 22222
           user: root
           key: ${{ secrets.BFCC_SERVER_KEY }}
-          script: pwd
+          script: ./publish.sh
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
