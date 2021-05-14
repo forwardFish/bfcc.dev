@@ -60,5 +60,15 @@ module.exports = {
         // { text: 'TUI', link: '/api/bfs/DomActivity' },
       ]
     }
+  ],
+  '/knowledge/': [
+    {
+      text: '知识库',
+      children: [
+        { text: '共识激励机制', link: '/knowledge/01' },
+        { text: '共识投票机制', link: '/knowledge/02' },
+        { text: '区块锻造者竞选', link: '/knowledge/03' }
+      ]
+    },
   ]
 }

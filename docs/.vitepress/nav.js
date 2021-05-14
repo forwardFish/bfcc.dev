@@ -15,5 +15,9 @@ module.exports = [
       { text: '移动端 API', link: '/api/bfs/bfs', activeMatch: '^/api/bfs/' }
     ]
   },
+  {
+    text: '知识库',
+    link: '/knowledge/01'
+  },
   { text: '社区问答', link: 'https://qa.bfcc.dev/' }
 ]
