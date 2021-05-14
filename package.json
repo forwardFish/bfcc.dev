@@ -2,7 +2,7 @@
   "name": "bbfc.dev",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vitepress dev docs --host",
+    "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"
   },

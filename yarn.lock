@@ -194,7 +194,7 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.11.tgz#aeb16f50649a91af79dbe36574b66d0f9e4d9f71"
   integrity sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
 
-"@vitejs/plugin-vue@^1.1.4":
+"@vitejs/plugin-vue@^1.1.0":
   version "1.2.2"
   resolved "https://registry.nlark.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.2.2.tgz#b0038fc11b9099f4cd01fcbf0ee419adda417b52"
   integrity sha1-sAOPwRuQmfTNAfy/DuQZrdpBe1I=
@@ -608,7 +608,7 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-fs-extra@^9.1.0:
+fs-extra@^9.0.0:
   version "9.1.0"
   resolved "https://registry.nlark.com/fs-extra/download/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
   integrity sha1-WVRGDHZKjaIJS6NVS/g55rmnyG0=
@@ -642,7 +642,7 @@ glob-parent@^5.1.0:
   dependencies:
     is-glob "^4.0.1"
 
-globby@^11.0.2:
+globby@^11.0.1:
   version "11.0.3"
   resolved "https://registry.nlark.com/globby/download/globby-11.0.3.tgz#9b1f0cb523e171dd1ad8c7b2a9fb4b644b9593cb"
   integrity sha1-mx8MtSPhcd0a2MeyqftLZEuVk8s=
@@ -975,7 +975,7 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-ora@^5.3.0:
+ora@^5.1.0:
   version "5.4.0"
   resolved "https://registry.nlark.com/ora/download/ora-5.4.0.tgz#42eda4855835b9cd14d33864c97a3c95a3f56bf4"
   integrity sha1-Qu2khVg1uc0U0zhkyXo8laP1a/Q=
@@ -1099,7 +1099,7 @@ preact@^10.0.0:
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.5.8.tgz#96e71e2caadf60b5ff901f0e4772a46ba0756336"
   integrity sha512-8d0FfBX3O0ay34i15mTckXicSsvaQLemPUByXTyfQUxDeFqZhbtnftVZMNqX3zEJLHcy1bqRu9t+V4GqJtG1TQ==
 
-prismjs@^1.23.0:
+prismjs@^1.20.0:
   version "1.23.0"
   resolved "https://registry.nlark.com/prismjs/download/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
   integrity sha1-07OWf31yRAaQSXZSqdQP8EYGfzM=
@@ -1176,7 +1176,7 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-sirv@^1.0.11:
+sirv@^1.0.10:
   version "1.0.11"
   resolved "https://registry.npm.taobao.org/sirv/download/sirv-1.0.11.tgz#81c19a29202048507d6ec0d8ba8910fda52eb5a4"
   integrity sha1-gcGaKSAgSFB9bsDYuokQ/aUutaQ=
@@ -1304,7 +1304,7 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vite@^2.0.5:
+vite@^2.0.0-beta.56:
   version "2.3.2"
   resolved "https://registry.nlark.com/vite/download/vite-2.3.2.tgz#cfac76b04d4dee1c7303b55f563b5b62d32f41fe"
   integrity sha1-z6x2sE1N7hxzA7VfVjtbYtMvQf4=
@@ -1316,14 +1316,14 @@ vite@^2.0.5:
   optionalDependencies:
     fsevents "~2.3.1"
 
-vitepress@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.nlark.com/vitepress/download/vitepress-0.13.2.tgz#f4bc7d11844172fb2e2fedb42945f84e1b60b207"
-  integrity sha1-9Lx9EYRBcvsuL+20KUX4Thtgsgc=
+vitepress@^0.11.4:
+  version "0.11.5"
+  resolved "https://registry.nlark.com/vitepress/download/vitepress-0.11.5.tgz#1973058ff50fab8702438361c5a5f1c1df336be1"
+  integrity sha1-GXMFj/UPq4cCQ4NhxaXxwd8za+E=
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"
-    "@vitejs/plugin-vue" "^1.1.4"
+    "@vitejs/plugin-vue" "^1.1.0"
     "@vue/compiler-sfc" "^3.0.5"
     "@vue/server-renderer" "^3.0.5"
     chalk "^4.1.0"
@@ -1331,8 +1331,8 @@ vitepress@^0.13.2:
     debug "^4.1.1"
     diacritics "^1.3.0"
     escape-html "^1.0.3"
-    fs-extra "^9.1.0"
-    globby "^11.0.2"
+    fs-extra "^9.0.0"
+    globby "^11.0.1"
     gray-matter "^4.0.2"
     lru-cache "^6.0.0"
     markdown-it "^10.0.0"
@@ -1341,11 +1341,12 @@ vitepress@^0.13.2:
     markdown-it-emoji "^1.4.0"
     markdown-it-table-of-contents "^0.4.4"
     minimist "^1.2.5"
-    ora "^5.3.0"
+    ora "^5.1.0"
     polka "^0.5.2"
-    prismjs "^1.23.0"
-    sirv "^1.0.11"
-    vite "^2.0.5"
+    prismjs "^1.20.0"
+    sirv "^1.0.10"
+    slash "^3.0.0"
+    vite "^2.0.0-beta.56"
     vue "^3.0.5"
 
 vue@^3.0.5:
