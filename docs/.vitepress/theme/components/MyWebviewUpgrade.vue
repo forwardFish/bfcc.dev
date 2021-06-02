@@ -1,7 +1,7 @@
 <template>
   <main class="page">
     <div class="container">
-      <h1 class="title">Android系统webview版本升级</h1>
+      <h1 class="title">Android系统WebView版本升级</h1>
       <div class="content">
         <h3>
         请在手机浏览器打开以下地址，选择合适的版本下载升级
