@@ -4,3 +4,4 @@
 dist
 node_modules
 TODOs.md
+yarn.lock
