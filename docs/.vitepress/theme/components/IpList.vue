@@ -41,7 +41,7 @@
 }
 
 </style>
-<script setup scoped>
+<script>
 function addCopyButtons(clipboard) {
     document.querySelectorAll('pre > code').forEach(function (codeBlock) {
         var button = document.createElement('button');
