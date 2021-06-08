@@ -23,3 +23,4 @@ sidebar: false
 }
 
 ```
+<my-ip-list />
