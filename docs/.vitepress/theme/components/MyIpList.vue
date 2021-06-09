@@ -29,6 +29,18 @@
 </style>
 <script setup>
 if (typeof window !== 'undefined'){
+    const copyToClipboard = str =>{
+        const el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly','');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+
     document.querySelectorAll('pre > code').forEach((codeBlock, index) => {
         var button = document.createElement('button');
             button.className = 'copy-code-button';
@@ -38,7 +50,8 @@ if (typeof window !== 'undefined'){
                 pre.parentNode.insertBefore(button, pre);
 
             button.addEventListener('click', () => {
-                window.navigator.clipboard.writeText(codeBlock.innerText);
+                // window.navigator.clipboard.writeText(codeBlock.innerText);
+                copyToClipboard(codeBlock.innerText);
                 button.classList.add('copied');
 
                 setTimeout(() => {
@@ -46,5 +59,7 @@ if (typeof window !== 'undefined'){
                 }, 2000);
             });
     });
+
+    
 }
 </script> 
