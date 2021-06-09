@@ -108,7 +108,7 @@
         <div class="title">推荐</div>
         <div class="description">RECOMMEND</div>
         <div class="recommend-articles">
-          <a class="recommend-item" href="/blog/03">
+          <a class="recommend-item" href="/blog/03.html">
             <div class="img-container"><img src="./imgs/re_03.jpg" /></div>
             <div class="recommend-item-name">
               生物链林BFChain的共识机制有什么独到之处？
@@ -117,7 +117,7 @@
               共识（Consensus），即达成一致的意见。自人类协作关系产生起，共识就已诞生。一个正常运转的...
             </div>
           </a>
-          <a class="recommend-item" href="/blog/04">
+          <a class="recommend-item" href="/blog/04.html">
             <div class="img-container"><img src="./imgs/re_04.jpg" /></div>
             <div class="recommend-item-name">
               生物链林的技术特性和优势
@@ -126,7 +126,7 @@
               生物链林是完全国产自有知识产权的移动端区块链底层基础设施，也是全球首个移动端区块链网络，拥有独特的基于用户参与度的共识机制，以及自由生长的跨链技术等特性。
             </div>
           </a>
-          <a class="recommend-item" href="/blog/05">
+          <a class="recommend-item" href="/blog/05.html">
             <div class="img-container"><img src="./imgs/re_05.jpg" /></div>
             <div class="recommend-item-name">
               BFChain首创的移动端点对点通信方案，到底厉害在哪？
@@ -136,7 +136,7 @@
               peer，即点对点）的通信方式...
             </div>
           </a>
-          <a class="recommend-item" href="/blog/06">
+          <a class="recommend-item" href="/blog/06.html">
             <div class="img-container"><img src="./imgs/re_06.jpg" /></div>
             <div class="recommend-item-name">
               揭秘BFChain如何破解移动端区块链三大技术难题？
@@ -146,7 +146,7 @@
             </div>
           </a>
         </div>
-        <a class="more" href="/blog/">更多 ></a>
+        <a class="more" href="/blog/index.html">更多 ></a>
       </div>
     </section>
   </main>
