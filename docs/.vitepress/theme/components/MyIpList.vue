@@ -1,28 +1,32 @@
 <style>
+[class~=language-json]:before {
+    left: 1em;
+    right: auto;
+}
 .copy-code-button {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   grid-column-gap: 4px;
   border: none;
+  border-radius: 4px;
+  margin: 4px 4px 0 auto;
   cursor: pointer;
-  font-size: 1rem;
   padding: 4px 8px;
 }
 
-.copy-code-button::before {
+.copy-code-button::after {
     content: "复制";
   }
 
- .copy-code-button::after {
+ .copy-code-button::before {
     content: "📋";
-    display: block;
   }
 
-  .copied::before {
+  .copied::after {
       content: "已复制!";
     }
- .copied::after {
+ .copied::before {
       content: "✔️";
     }
 
