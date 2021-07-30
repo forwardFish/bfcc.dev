@@ -8,7 +8,9 @@ module.exports = {
   ],
   '/guide/pc/linux/': [
     { text: '教程简介', link: '/guide/pc/linux/index.html' },
-    { text: '安装运行', link: '/guide/pc/linux/install-centos7.html' }
+    { text: '搭建Linux环境', link: '/guide/pc/linux/env-install.html' },
+    { text: '节点部署', link: '/guide/pc/linux/deploy.html' },
+    { text: '节点授权与配置', link: '/guide/pc/linux/authorize.html' }
   ],
   '/api/pc/': [
     {
