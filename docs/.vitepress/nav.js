@@ -4,7 +4,8 @@ module.exports = [
   {
     text: '教程',
     items: [
-      { text: 'PC 端教程', link: '/guide/pc/index.html', activeMatch: '^/guide/pc/' },
+      { text: 'Windows-PC 端教程', link: '/guide/pc/windows/index.html', activeMatch: '^/guide/pc/windows/' },
+      { text: 'Linux-PC 端教程', link: '/guide/pc/linux/index.html', activeMatch: '^/guide/pc/linux/' },
       { text: '移动端教程', link: '/guide/bfs/index.html' }
     ]
   },

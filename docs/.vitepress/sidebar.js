@@ -1,10 +1,14 @@
 module.exports = {
-  '/guide/pc/': [
-    { text: '教程简介', link: '/guide/pc/index.html' },
-    { text: '安装运行', link: '/guide/pc/install.html' },
-    { text: '节点部署', link: '/guide/pc/deploy.html' },
-    { text: '常见问题', link: '/guide/pc/faq.html' },
-    { text: '名词解释', link: '/guide/pc/glossary.html' }
+  '/guide/pc/windows/': [
+    { text: '教程简介', link: '/guide/pc/windows/index.html' },
+    { text: '安装运行', link: '/guide/pc/windows/install.html' },
+    { text: '节点部署', link: '/guide/pc/windows/deploy.html' },
+    { text: '常见问题', link: '/guide/pc/windows/faq.html' },
+    { text: '名词解释', link: '/guide/pc/windows/glossary.html' }
+  ],
+  '/guide/pc/linux/': [
+    { text: '教程简介', link: '/guide/pc/linux/index.html' },
+    { text: '安装运行', link: '/guide/pc/linux/install-centos7.html' }
   ],
   '/api/pc/': [
     {
