@@ -321,7 +321,7 @@
    - 配置节点IP
      修改配置文件/data/bfchain/conf/bft-config-mainnet.json 中的 peers字段，添加初始连接的ip
      
-      ![config-peers](.\images\config-peers.png)
+      ![config-peers](./images/config-peers.png)
      
    
 6. 配置supervisor(管理后台允许bfchain进程)
