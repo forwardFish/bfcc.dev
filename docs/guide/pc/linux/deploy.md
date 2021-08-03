@@ -86,9 +86,13 @@
 为了确保您能顺利运行生物链林PC节点程序 - BCF，我们推荐您使用以下配置的设备： 
 
   CPU：16核（主频3.0G+）
+
   内存：32G
+
   硬盘：SSD 1T以上
+
   系统：CentOS 7.8
+
 
 
 - 节点程序安装与配置步骤如下：   
@@ -251,16 +255,144 @@
    
    
    
-### 运行服务   
+### 启动服务   
 
-1. 运行服务
+1. 启动BFChain节点程序 - BCF
 
    ```
    systemctl enable supervisord
    systemctl start supervisord
    ```
 
+
+
+## 私有链节点部署
+
+### 环境
+
+|       | 配置                                                  | IP           |
+| ----- | ----------------------------------------------------- | ------------ |
+| Node1 | CPU：16核心 内存：32G带宽：1G SSD：1T系统：centos 7.8 | 172.30.56.61 |
+| Node2 | CPU：16核心 内存：32G带宽：1G SSD：1T系统：centos 7.8 | 172.30.56.62 |
+| Node3 | CPU：16核心 内存：32G带宽：1G SSD：1T系统：centos 7.8 | 172.30.56.63 |
+
+
+ 
+
+### 节点程序安装与配置
+
+> 请确保您的设备已经安装恰当的依赖环境。
+
+1. ​	创建bfchain目录
+
+   ```
+   mkdir -p  /data/bfchain/
+   ```
+
+2. 下载release的方式获取bfchain.zip包。
    
+3. 将bfchain.zip解压至/data/bfchain目录
+
+   ```
+   unzip -o -q /data/release/bfchain.zip -d /data/bfchain
+   ```
+
+4. 授予文件可执行权限
+
+   ```
+   chmod u+x /data/bfchain/bcf
+   chmod u+x /data/bfchain/mongoComponents/linux/mongo*
+   chmod u+x /data/bfchain/turnserver/bin/turnserver
+   ```
+
+5. 配置文件
+
+   - 下载创世块
+      向bfchain团队购买创世块，并将文件放入 /data/bfchain/genesisInfos 目录中
+     
+   - 修改配置文件(/data/bfchain/conf/base-config.json)
+     
+     ​	配置外部引入创世块 isGenesisInfoProvideExternally为true 
+     ​	配置正式网络或测试网络bnid为b或c 
+     ​	配置所导入的创世链链名chainName
+     ​	配置所导入的创世块的区块链资产名chainAssetType
+     ​	配置所导入的创世块的magic chainMagic
+     
+   - 配置节点IP
+     修改配置文件/data/bfchain/conf/bft-config-mainnet.json 中的 peers字段，添加初始连接的ip
+     
+      ![config-peers](.\images\config-peers.png)
+     
+   
+6. 配置supervisor(管理后台允许bfchain进程)
+
+   ```
+   echo -ne "
+   	[program:bcf]
+   	command=/data/bfchain/bcf  ; 
+   	directory=/data/bfchain
+   	autostart=true    ; 
+   	user=root      ;
+   	autorestart=unexpected   ;
+   	exitcode=0,2   ;
+   	startretries=3    ;
+   	priority=999     ;
+   	redirect_stderr=true ;
+   	stdout_logfile_maxbytes=50MB  ;
+   	stdout_logfile_backups = 20  ;
+   	stdout_logfile=/data/bfchain/logs/bcf.log    ;
+   	stopasgroup=true   ;
+   " >> /etc/supervisord.d/bcf.ini
+   ```
+
+
+### 防火墙配置   
+
+1. 系统防火墙策略(仅开放3台节点互联)
+
+   FIREWALLD:
+
+   ```
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9000" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9001" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9002" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9003" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9005" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9007" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9009" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.61" port port="9011" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9000" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9001" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9002" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9003" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9005" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9007" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9009" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.62" port port="9011" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9000" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9001" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9002" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9003" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9005" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9007" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9009" protocol="tcp" accept"
+   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="172.30.56.63" port port="9011" protocol="tcp" accept"
+   ```
+
+   iptables:
+
+   ```
+   iptables -A INPUT -p tcp -m multiport --dport 9000:9003,9005,9007,9009,9011 -m state --state NEW,ESTABLISHED -s 172.30.56.61,172.30.56.62,172.30.56.63  -j ACCEPT
+   ```
+
+
+### 启动服务   
+
+1. 启动BFChain节点程序 - BCF
+
+   ```
+   systemctl enable supervisord
+   systemctl start supervisord  
 
 
    
