@@ -79,7 +79,7 @@
 
  
 
-## 公链节点部署
+## 公有链节点部署
 
 ### 节点程序安装与配置
 
@@ -394,7 +394,7 @@
    systemctl enable supervisord
    systemctl start supervisord  
 
-
+   ```
    
 
  
