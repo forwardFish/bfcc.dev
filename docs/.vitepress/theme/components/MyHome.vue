@@ -1,6 +1,6 @@
 <template>
   <block-carousel class="top-carsousel" :slides="slideItems" />
-  <main>
+  <main class="content-center">
     <section class="forest">
       <div class="content">
         <div class="title">什么是生物链林?</div>
@@ -157,11 +157,11 @@ import BlockFooter from './block/footer.vue'
 import homeBannerImg1 from './banners/home1.png'
 import homeBannerImg2 from './banners/home2.png'
 import homeBannerImg3 from './banners/home3.png'
-const slideItems = ref([
+const slideItems = [
   { img: homeBannerImg1, href: '#1' },
   { img: homeBannerImg2, href: '#2' },
   { img: homeBannerImg3, href: '#3' }
-])
+]
 </script>
 <style global>
 :root {
@@ -169,12 +169,7 @@ const slideItems = ref([
   --c-brand-light: #5688ff;
   --docsearch-primary-color: #4a78f7;
 }
-.top-carsousel {
-  margin: 0 auto;
-  margin-top: var(--header-height);
-  width: 1920px;
-  height: 480px;
-}
+
 .nav-bar-title {
   text-indent: -9999px;
   width: 175px;
@@ -199,11 +194,6 @@ p > img {
 }
 </style>
 <style scoped>
-main {
-  width: 1024px !important;
-  margin: 0 auto !important;
-  padding-top: var(--header-height);
-}
 .home {
   padding-top: var(--header-height);
 }
