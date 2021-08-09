@@ -199,6 +199,11 @@ p > img {
 }
 </style>
 <style scoped>
+main {
+  width: 1024px !important;
+  margin: 0 auto !important;
+  padding-top: var(--header-height);
+}
 .home {
   padding-top: var(--header-height);
 }
@@ -224,9 +229,6 @@ body {
 }
 
 /* -----main global begin------- */
-main {
-  width: 100%;
-}
 header,
 footer {
   width: 100%;
