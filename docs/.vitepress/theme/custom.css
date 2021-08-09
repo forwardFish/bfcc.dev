@@ -1,0 +1,33 @@
+:root {
+  --c-brand: #4a78f7;
+  --c-brand-light: #5688ff;
+  --docsearch-primary-color: #4a78f7;
+}
+.nav-bar-title {
+  text-indent: -9999px;
+  width: 175px;
+  height: 37px;
+  background: url(/logo.png);
+  background-size: cover;
+}
+.DocSearch {
+  --docsearch-primary-color: var(--docsearch-primary-color) !important;
+  --docsearch-highlight-color: var(--docsearch-primary-color) !important;
+}
+
+p > img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.nav-bar{
+  width: 1024px;
+  margin: 0 auto;
+}
+.sidebar{
+  left: auto!important;
+}
+#app{
+  width: 1024px;
+  margin: 0 auto;
+}

@@ -1,9 +1,6 @@
 <template>
   <main>
-    <div class="banner">
-      <h1>BFChain开发者社区</h1>
-      <p>为开发者提供全方位服务和工具，帮助构建区块链生态体系。</p>
-    </div>
+    <block-carousel class="top-carsousel" />
     <section class="forest">
       <div class="content">
         <div class="title">什么是生物链林?</div>
@@ -150,20 +147,13 @@
       </div>
     </section>
   </main>
-  <footer>
-    <div class="content footer-content">
-      <div class="footer-copyright">
-        <span>版权所有 © BFChain开发者社区</span>
-      </div>
-      <div class="footer-law">
-        <!-- <span><a href="#">隐私政策</a></span> -->
-      </div>
-    </div>
-  </footer>
+  <block-footer />
 </template>
 
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+import BlockCarousel from './block/carousel.vue'
+import BlockFooter from './block/footer.vue'
+</script>
 <style global>
 :root {
   --c-brand: #4a78f7;

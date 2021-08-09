@@ -3,7 +3,7 @@ import MyHome from '/@theme/components/MyHome.vue'
 import MyBlog from '/@theme/components/MyBlog.vue'
 import MyWebviewUpgrade from '/@theme/components/MyWebviewUpgrade.vue'
 import MyIpList from '/@theme/components/MyIpList.vue'
-
+import './custom.css'
 
 export default {
   ...DefaultTheme,
