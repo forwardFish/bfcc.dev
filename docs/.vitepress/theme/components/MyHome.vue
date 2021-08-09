@@ -558,10 +558,10 @@ section {
 }
 /* -----recommend end----- */
 
-footer {
+/* footer {
   height: 80px;
   margin-top: 60px;
-}
+} */
 .footer-content {
   display: flex;
   justify-content: space-between;
