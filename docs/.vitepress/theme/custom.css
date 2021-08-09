@@ -27,7 +27,8 @@ p > img {
 .sidebar{
   left: auto!important;
 }
-#app{
-  width: 1024px;
-  margin: 0 auto;
+main{
+  width: 1024px!important;
+  margin: 0 auto!important;
+  padding-top: var(--header-height);
 }
