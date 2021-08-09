@@ -2,6 +2,7 @@ module.exports = [
   { text: '首页', link: '/' },
   {
     text: '教程',
+    activeMatch: '^/guide',
     items: [
       {
         text: 'PC全节点教程',
@@ -13,6 +14,7 @@ module.exports = [
   },
   {
     text: 'API 参考',
+    activeMatch: '^/api',
     items: [
       { text: 'PC全节点', link: '/api/pc/1-0.html', activeMatch: '^/api/pc/' },
       {
