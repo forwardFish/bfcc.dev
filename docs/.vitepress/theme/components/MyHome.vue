@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <block-carousel class="top-carsousel" />
+  <block-carousel class="top-carsousel" :slides="slideItems" />
+  <main class="content-center">
     <section class="forest">
       <div class="content">
         <div class="title">什么是生物链林?</div>
@@ -151,8 +151,17 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import BlockCarousel from './block/carousel.vue'
 import BlockFooter from './block/footer.vue'
+import homeBannerImg1 from './banners/home1.png'
+import homeBannerImg2 from './banners/home2.png'
+import homeBannerImg3 from './banners/home3.png'
+const slideItems = [
+  { img: homeBannerImg1, href: '#1' },
+  { img: homeBannerImg2, href: '#2' },
+  { img: homeBannerImg3, href: '#3' }
+]
 </script>
 <style global>
 :root {
@@ -160,6 +169,7 @@ import BlockFooter from './block/footer.vue'
   --c-brand-light: #5688ff;
   --docsearch-primary-color: #4a78f7;
 }
+
 .nav-bar-title {
   text-indent: -9999px;
   width: 175px;
@@ -198,13 +208,7 @@ p > img {
   justify-content: space-around;
   padding: 180px 0;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  width: 100%;
-}
+
 body {
   width: 100%;
   font-size: 14px;
@@ -215,21 +219,14 @@ body {
 }
 
 /* -----main global begin------- */
-main {
-  width: 100%;
-}
 header,
-section,
 footer {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-section {
-  height: 480px;
-  background-color: rgb(250, 250, 250);
-}
+
 /* -----main global end------- */
 .content {
   width: 1024px;
