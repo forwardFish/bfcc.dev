@@ -18,7 +18,8 @@
         <h2>BFChain私有数据版(私有链)</h2>
         <h3>BCF 节点软件</h3>
         <p>
-          专属个人或企业的隐私数据保护 为个人或企业内部构建私有可信网络
+          专属个人或企业的隐私数据保护<br />
+          为个人或企业内部构建私有可信网络
         </p>
         <div class="balance-color-box"></div>
       </div>
@@ -144,7 +145,7 @@ const slideItems = [
   {
     img: bannerImg3,
     href: '#download',
-    linkText: '前往下载',
+    // linkText: '前往下载',
     linkIcon: downIcon,
     title: 'BFChain生物链林节点软件BCF',
     desc: `使用BFChain 节点软件 - BCF 即可轻松加入BFChain网络，构建PC全节点，
@@ -185,7 +186,7 @@ h3 {
   width: 400px;
 }
 .text p {
-  width: 380px;
+  width: 384px;
   font-size: 16px;
 }
 .balance-color-box {
