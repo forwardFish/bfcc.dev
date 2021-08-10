@@ -36,7 +36,7 @@ module.exports = [
         link: '/download/bcf.html',
         activeMatch: '^/download/'
       },
-      { text: '白皮书', link: 'https://bfcc.dev/white-paper-v3.7.pdf' }
+      { text: '白皮书', link: '/white-paper-v3.7.pdf' ,target:'blank'}
     ]
   },
   {
