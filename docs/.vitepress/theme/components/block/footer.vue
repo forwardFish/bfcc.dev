@@ -183,6 +183,8 @@ export default {
 footer {
   background-color: #4a78f7;
   color: #fff;
+  display: flex;
+  margin-top: 40px;
 }
 .content {
   margin: 0 auto;

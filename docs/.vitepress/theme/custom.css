@@ -23,7 +23,7 @@ p > img {
 .top-carsousel {
   margin: 0 auto;
   margin-top: var(--header-height);
-  width: 1920px;
+  width: 100%;
   height: 480px;
 }
 .content-center {
