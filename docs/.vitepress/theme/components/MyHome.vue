@@ -166,20 +166,21 @@ const slideItems = [
     title: 'BFChain生物链林开发者社区',
     desc: '为开发者提供全方位服务和工具，帮助构建区块链生态体系。'
   },
-  {
-    img: bannerImg2,
-    href: '#2',
-    linkText: '前往查看',
-    title: 'BFChain生物链林白皮书',
-    desc: '全球首款移动端共识公有链，新数字时代的通用型基础设施'
-  },
+
   {
     img: bannerImg3,
-    href: '#3',
+    href: '/download/bcf.html',
     linkText: '前往下载',
     linkIcon: downIcon,
     title: 'BFChain生物链林节点软件BCF',
     desc: '快速、安全构建属于您的第一条区块链、第一个PC全节点'
+  },
+  {
+    img: bannerImg2,
+    href: 'https://bfcc.dev/white-paper-v3.7.pdf',
+    linkText: '前往查看',
+    title: 'BFChain生物链林白皮书',
+    desc: '全球首款移动端共识公有链，新数字时代的通用型基础设施'
   }
 ]
 </script>

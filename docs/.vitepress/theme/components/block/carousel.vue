@@ -1,5 +1,11 @@
 <template>
-  <vueper-slides :slideRatio="1 / 4" 3d>
+  <vueper-slides
+    :autoplay="true"
+    :slideRatio="1 / 4"
+    3d
+    :arrows="false"
+    :dragging-distance="50"
+  >
     <vueper-slide
       v-for="(slide, i) in props.slides"
       :key="i"
@@ -40,6 +46,8 @@ const props = defineProps({
 }
 .content p {
   margin-bottom: 36px;
+  font-size: 14px;
+  width: 480px;
 }
 .content a {
   background: #fff;
@@ -58,5 +66,6 @@ const props = defineProps({
 .center p {
   text-align: center;
   color: #131313;
+  width: 100%;
 }
 </style>
