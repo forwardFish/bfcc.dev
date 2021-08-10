@@ -1,5 +1,5 @@
 <template>
-  <block-carousel2 class="top-carsousel" :slides="slideItems" />
+  <block-carousel class="top-carsousel" :slides="slideItems" />
   <main class="content-center">
     <div class="section">
       <img class="bg" :src="bg1" />
@@ -34,7 +34,7 @@
         <div class="balance-color-box"></div>
       </div>
     </div>
-    <h1>BCF节点软件下载</h1>
+    <h1 id="download">BCF节点软件下载</h1>
     <h4>BFChain数据中心版(公有链) - BCF节点软件(V 3.6.60)</h4>
     <table>
       <tr>
@@ -132,14 +132,23 @@
 </template>
 
 <script setup lang="ts">
-import BlockCarousel2 from './block/carousel2.vue'
+import BlockCarousel from './block/carousel.vue'
 import BlockFooter from './block/footer.vue'
 import bg1 from './imgs/download-bg1.png'
 import bg2 from './imgs/download-bg2.png'
 import bg3 from './imgs/download-bg3.png'
-import homeBannerImg1 from './banners/home1.png'
+import bannerImg3 from './banners/home3.png'
+import downIcon from './imgs/down-icon.png'
+
 const slideItems = [
-  { img: homeBannerImg1, href: '#1', content: 'BFChain生物链林节点软件-BCF' }
+  {
+    img: bannerImg3,
+    href: '#download',
+    linkText: '前往下载',
+    linkIcon: downIcon,
+    title: 'BFChain生物链林节点软件BCF',
+    desc: '快速、安全构建属于您的第一条区块链、第一个PC全节点'
+  }
 ]
 </script>
 <style scoped>
