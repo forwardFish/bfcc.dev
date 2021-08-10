@@ -234,6 +234,12 @@ const guides = [
   text-align: center;
 }
 
+.quick-guide .sub-title{
+  font-family: PingFangSC-Medium;
+  color: #666666;
+}
+
+
 /*step section begin*/
 
 .step{
