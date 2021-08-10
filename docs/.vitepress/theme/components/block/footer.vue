@@ -19,7 +19,7 @@
       <div class="footer-bottom">
         <div class="logos">
           <div class="logo" v-for="logo in logos">
-            <img src="../imgs/icon_twitter.png" alt="logo" />
+            <img :src="logo.img_url" alt="logo" />
           </div>
         </div>
         <div class="copyright">
@@ -154,22 +154,23 @@ const footerContent = [
     ]
   }
 ]
+const IMG_BASE = '/.vitepress/theme/components/imgs';
 const logos = [
   {
     name: 'Github',
-    url: '../imgs/icon_twitter.png'
+    img_url: `${IMG_BASE}/icon_github.png`
   },
   {
     name: 'Twitter',
-    url: '../imgs/icon_twitter.png'
+    img_url: `${IMG_BASE}/icon_twitter.png`
   },
   {
     name: 'weixin',
-    url: '../imgs/icon_twitter.png'
+    img_url: `${IMG_BASE}/icon_weibo.png`
   },
   {
     name: 'weibo',
-    url: '../imgs/icon_twitter.png'
+    img_url: `${IMG_BASE}/icon_weixin.png`
   }
 ]
 export default {
