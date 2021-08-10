@@ -12,14 +12,16 @@
         >
           <div class="content-item-title">{{ contentItem.title }}</div>
           <div class="list-item" v-for="item in contentItem.list" :key="item">
-            {{ item.text }}
+            <a :href="item.link">{{ item.text }}</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="logos">
           <div class="logo" v-for="logo in logos">
-            <img :src="logo.img_url" alt="logo" />
+            <a :href="logo.link" rel="noopener noreferrer">
+              <img :src="logo.img_url" alt="logo" />
+            </a>
           </div>
         </div>
         <div class="copyright">
@@ -74,10 +76,6 @@ const footerContent = [
         link: '#'
       },
       {
-        text: '商务合作',
-        link: '#'
-      },
-      {
         text: '商用授权协议',
         link: '#'
       },
@@ -118,14 +116,6 @@ const footerContent = [
       {
         text: '微博',
         link: '#'
-      },
-      {
-        text: '抖音',
-        link: '#'
-      },
-      {
-        text: '知乎',
-        link: '#'
       }
     ]
   },
@@ -158,19 +148,24 @@ const IMG_BASE = '/.vitepress/theme/components/imgs';
 const logos = [
   {
     name: 'Github',
-    img_url: `${IMG_BASE}/icon_github.png`
+    img_url: `${IMG_BASE}/icon_github.png`,
+    link: '#'
+
   },
   {
     name: 'Twitter',
-    img_url: `${IMG_BASE}/icon_twitter.png`
+    img_url: `${IMG_BASE}/icon_twitter.png`,
+    link: '#'
   },
   {
     name: 'weixin',
-    img_url: `${IMG_BASE}/icon_weibo.png`
+    img_url: `${IMG_BASE}/icon_weixin.png`,
+    link: '#'
   },
   {
     name: 'weibo',
-    img_url: `${IMG_BASE}/icon_weixin.png`
+    img_url: `${IMG_BASE}/icon_weibo.png`,
+    link: '#'
   }
 ]
 export default {
@@ -206,19 +201,26 @@ footer {
   color: #ffffff;
 }
 .footer-content {
-  margin: 32px 0;
+  padding: 32px 0;
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #fff;
 }
 
 .content-item-title {
   margin-bottom: 20px;
   font-size: 18px;
+  font-weight: bold;
   font-family: PingFangSC-Semibold;
 }
 .list-item {
   margin-top: 12px;
   font-size: 14px;
+}
+.list-item > a{
+    color: #fff;
+    text-decoration: none;
 }
 
 .footer-bottom {
