@@ -297,7 +297,7 @@ const guides = [
 
 /**run-ways begin**/
 .try-section{
-  margin-top: 24px;
+  margin-top: 36px;
 }
 .run-way-item,.guide{
   display: flex;
