@@ -1,5 +1,5 @@
 <template>
-  <block-carousel2 class="top-carsousel" :slides="slideItems" />
+  <block-carousel class="top-carsousel" :slides="slideItems" />
   <main class="content-center">
     <div class="section">
       <img class="bg" :src="bg1" />
@@ -18,7 +18,8 @@
         <h2>BFChain私有数据版(私有链)</h2>
         <h3>BCF 节点软件</h3>
         <p>
-          专属个人或企业的隐私数据保护 为个人或企业内部构建私有可信网络
+          专属个人或企业的隐私数据保护<br />
+          为个人或企业内部构建私有可信网络
         </p>
         <div class="balance-color-box"></div>
       </div>
@@ -34,7 +35,7 @@
         <div class="balance-color-box"></div>
       </div>
     </div>
-    <h1>BCF节点软件下载</h1>
+    <h1 id="download">BCF节点软件下载</h1>
     <h4>BFChain数据中心版(公有链) - BCF节点软件(V 3.6.60)</h4>
     <table>
       <tr>
@@ -49,7 +50,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/public/linux.html">查看所有版本</a></td>
       </tr>
       <tr>
         <td>Windows</td>
@@ -57,7 +58,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/public/windows.html">查看所有版本</a></td>
       </tr>
     </table>
     <h4>BFChain数据中心版(公有链) - 区块链数据包</h4>
@@ -91,7 +92,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/private/linux.html">查看所有版本</a></td>
       </tr>
       <tr>
         <td>Windows</td>
@@ -99,7 +100,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/private/windows.html">查看所有版本</a></td>
       </tr>
     </table>
     <h4>BFChain可信数据版(联盟链) - BCF节点软件(V 3.6.60)</h4>
@@ -116,7 +117,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/union/linux.html">查看所有版本</a></td>
       </tr>
       <tr>
         <td>Windows</td>
@@ -124,7 +125,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/union/windows.html">查看所有版本</a></td>
       </tr>
     </table>
   </main>
@@ -132,14 +133,24 @@
 </template>
 
 <script setup lang="ts">
-import BlockCarousel2 from './block/carousel2.vue'
+import BlockCarousel from './block/carousel.vue'
 import BlockFooter from './block/footer.vue'
 import bg1 from './imgs/download-bg1.png'
 import bg2 from './imgs/download-bg2.png'
 import bg3 from './imgs/download-bg3.png'
-import homeBannerImg1 from './banners/home1.png'
+import bannerImg3 from './banners/home3.png'
+import downIcon from './imgs/down-icon.png'
+
 const slideItems = [
-  { img: homeBannerImg1, href: '#1', content: 'BFChain生物链林节点软件-BCF' }
+  {
+    img: bannerImg3,
+    href: '#download',
+    // linkText: '前往下载',
+    linkIcon: downIcon,
+    title: 'BFChain生物链林节点软件BCF',
+    desc: `使用BFChain 节点软件 - BCF 即可轻松加入BFChain网络，构建PC全节点，
+甚至创建您想要的区块链。`
+  }
 ]
 </script>
 <style scoped>
@@ -175,7 +186,7 @@ h3 {
   width: 400px;
 }
 .text p {
-  width: 380px;
+  width: 384px;
   font-size: 16px;
 }
 .balance-color-box {

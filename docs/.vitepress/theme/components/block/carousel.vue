@@ -1,14 +1,25 @@
 <template>
-  <vueper-slides lazy lazy-load-on-drag :slideRatio="1 / 4">
+  <vueper-slides
+    :autoplay="true"
+    :slideRatio="1 / 4"
+    3d
+    :arrows="false"
+    :dragging-distance="50"
+  >
     <vueper-slide
       v-for="(slide, i) in props.slides"
       :key="i"
       :image="slide.img"
-      :link="slide.href"
     >
-      <template #loader>
-        <i class="icon icon-loader spinning"></i>
-        <span>Loading...</span>
+      <template #content>
+        <div class="content" :class="slide.isCenter ? 'center' : ''">
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.desc }}</p>
+          <a :href="slide.href" v-if="slide.linkText"
+            >{{ slide.linkText }}
+            <img :src="slide.linkIcon" v-if="slide.linkIcon" />
+          </a>
+        </div>
       </template>
     </vueper-slide>
   </vueper-slides>
@@ -21,4 +32,40 @@ const props = defineProps({
   slides: Array
 })
 </script>
-<style scoped></style>
+<style scoped>
+.content {
+  color: #fff;
+  width: 1024px;
+  margin: 0 auto;
+}
+.content h2 {
+  margin-top: 140px;
+  margin-bottom: 0;
+  border: 0;
+  font-size: 36px;
+}
+.content p {
+  margin-bottom: 36px;
+  font-size: 14px;
+  width: 480px;
+}
+.content a {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  width: 130px;
+  height: 50px;
+  text-align: center;
+}
+.content img {
+  margin-left: 5px;
+}
+.center h2,
+.center p {
+  text-align: center;
+  color: #131313;
+  width: 100%;
+}
+</style>

@@ -89,13 +89,15 @@
 import BlockCarousel from './block/carousel.vue'
 import BlockFooter from './block/footer.vue'
 
-import homeBannerImg1 from './banners/home1.png'
-import homeBannerImg2 from './banners/home2.png'
-import homeBannerImg3 from './banners/home3.png'
+import bannerImg2 from './banners/home2.png'
 const slideItems = [
-  { img: homeBannerImg1, href: '#1' },
-  { img: homeBannerImg2, href: '#2' },
-  { img: homeBannerImg3, href: '#3' }
+  {
+    img: bannerImg2,
+    href: '#2',
+    linkText: '前往查看',
+    title: 'BFChain生物链林白皮书',
+    desc: '全球首款移动端共识公有链，新数字时代的通用型基础设施'
+  }
 ]
 
 const IMG_BASE = '/.vitepress/theme/components/imgs';
