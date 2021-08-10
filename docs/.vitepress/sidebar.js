@@ -12,6 +12,31 @@ module.exports = {
     { text: '节点部署', link: '/guide/pc/linux/deploy.html' },
     { text: '节点授权与配置', link: '/guide/pc/linux/authorize.html' }
   ],
+
+  '/download/': [
+    {
+      text: '公有链 - BCF',
+      activeMatch: '^/download/public/',
+      children: [
+        { text: 'Linux(CentOS)', link: '/download/public/linux.html' },
+        { text: 'Windows 系统', link: '/download/public/windows.html' }
+      ]
+    },
+    {
+      text: '私有链 - BCF',
+      children: [
+        { text: 'Linux(CentOS)', link: '/download/private/linux.html' },
+        { text: 'Windows 系统', link: '/download/private/windows.html' }
+      ]
+    },
+    {
+      text: '联盟链 - BCF',
+      children: [
+        { text: 'Linux(CentOS)', link: '/download/union/linux.html' },
+        { text: 'Windows 系统', link: '/download/union/windows.html' }
+      ]
+    }
+  ],
   '/api/pc/': [
     {
       text: '接口列表',
@@ -75,6 +100,6 @@ module.exports = {
         { text: '共识投票机制', link: '/knowledge/02.html' },
         { text: '区块锻造者竞选', link: '/knowledge/03.html' }
       ]
-    },
+    }
   ]
 }

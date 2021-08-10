@@ -49,7 +49,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/public/linux.html">查看所有版本</a></td>
       </tr>
       <tr>
         <td>Windows</td>
@@ -57,7 +57,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/public/windows.html">查看所有版本</a></td>
       </tr>
     </table>
     <h4>BFChain数据中心版(公有链) - 区块链数据包</h4>
@@ -91,7 +91,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/private/linux.html">查看所有版本</a></td>
       </tr>
       <tr>
         <td>Windows</td>
@@ -99,7 +99,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/private/windows.html">查看所有版本</a></td>
       </tr>
     </table>
     <h4>BFChain可信数据版(联盟链) - BCF节点软件(V 3.6.60)</h4>
@@ -116,7 +116,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/union/linux.html">查看所有版本</a></td>
       </tr>
       <tr>
         <td>Windows</td>
@@ -124,7 +124,7 @@
         <td>
           1234567aj7ae00c2783e4a5ab6b00a09 846de8fa37c549f196bd2e8b4f47bd23
         </td>
-        <td><a href="#">查看所有版本</a></td>
+        <td><a href="/download/union/windows.html">查看所有版本</a></td>
       </tr>
     </table>
   </main>
