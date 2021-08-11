@@ -29,7 +29,7 @@
               <img :src="logo.img_url" alt="logo" />
               <div class="QR-code"></div>
             </span>
-            <a v-else :href="logo.link" rel="noopener noreferrer">
+            <a v-else :href="logo.link" target="_blank" rel="noopener noreferrer">
               <img :src="logo.img_url" alt="logo" />
             </a>
           </div>
