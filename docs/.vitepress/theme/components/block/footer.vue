@@ -39,19 +39,19 @@ const footerContent = [
     list: [
       {
         text: 'BFSystem',
-        link: '#'
+        link: '/guide/bfs/index.html'
       },
       {
         text: 'PC全节点',
-        link: '#'
+        link: '/guide/pc/index.html'
       },
       {
         text: '知识库',
-        link: '#'
+        link: '/knowledge/01.html'
       },
       {
         text: 'API参考',
-        link: '#'
+        link: '/api/pc/1-0.html'
       },
       {
         text: '工具下载',
@@ -59,7 +59,7 @@ const footerContent = [
       },
       {
         text: '白皮书',
-        link: '#'
+        link: '/white-paper-v3.7.pdf'
       }
     ]
   },
@@ -69,23 +69,19 @@ const footerContent = [
     list: [
       {
         text: '社区问答',
+        link: 'https://qa.bfcc.dev/'
+      },
+      {
+        text: '产品迭代',//--跳转到新增的产品迭代页面
         link: '#'
       },
       {
-        text: '产品迭代',
+        text: '商用授权',//--社区开辟新的页面，存放授权协议材料(市场那边的材料还没备齐，先准备一个路径就好，一般为PDF+一些页面文字内容)
         link: '#'
       },
       {
-        text: '商用授权协议',
-        link: '#'
-      },
-      {
-        text: '加入我们',
-        link: '#'
-      },
-      {
-        text: '联系我们',
-        link: '#'
+        text: '加入我们',//----------直接跳转到BFChain官网的“加入我们”（官网页面改造中）
+        link: 'https://www.bfchain.org/join'
       }
     ]
   },
@@ -95,7 +91,7 @@ const footerContent = [
     list: [
       {
         text: 'Github',
-        link: '#'
+        link: 'https://github.com/BioforestChain/bfcc.dev'
       },
       {
         text: 'Twitter',
@@ -103,19 +99,19 @@ const footerContent = [
       },
       {
         text: 'Facebook',
-        link: '#'
+        link: 'https://www.facebook.com/BFChain-105459620795589'
       },
       {
         text: 'Discord',
-        link: '#'
+        link: 'https://discord.gg/b5mYEw2USV'
       },
       {
-        text: '微信',
+        text: '微信',//---公众号审批中，预计要明后天才出来
         link: '#'
       },
       {
         text: '微博',
-        link: '#'
+        link: 'https://weibo.com/u/7243924626'
       }
     ]
   },
@@ -125,11 +121,11 @@ const footerContent = [
     list: [
       {
         text: 'BFChain官网',
-        link: '#'
+        link: 'https://www.bfchain.org/'
       },
       {
         text: '实施平台',
-        link: '#'
+        link: 'https://instinct.one/home'
       }
     ]
   },
