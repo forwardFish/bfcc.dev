@@ -21,21 +21,21 @@ module.exports = {
         { text: 'Linux(CentOS)', link: '/download/public/linux.html' },
         { text: 'Windows 系统', link: '/download/public/windows.html' }
       ]
-    },
-    {
-      text: '私有链 - BCF',
-      children: [
-        { text: 'Linux(CentOS)', link: '/download/private/linux.html' },
-        { text: 'Windows 系统', link: '/download/private/windows.html' }
-      ]
-    },
-    {
-      text: '联盟链 - BCF',
-      children: [
-        { text: 'Linux(CentOS)', link: '/download/union/linux.html' },
-        { text: 'Windows 系统', link: '/download/union/windows.html' }
-      ]
     }
+    // {
+    //   text: '私有链 - BCF',
+    //   children: [
+    //     { text: 'Linux(CentOS)', link: '/download/private/linux.html' },
+    //     { text: 'Windows 系统', link: '/download/private/windows.html' }
+    //   ]
+    // },
+    // {
+    //   text: '联盟链 - BCF',
+    //   children: [
+    //     { text: 'Linux(CentOS)', link: '/download/union/linux.html' },
+    //     { text: 'Windows 系统', link: '/download/union/windows.html' }
+    //   ]
+    // }
   ],
   '/api/pc/': [
     {

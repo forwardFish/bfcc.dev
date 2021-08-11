@@ -31,7 +31,10 @@
     </div>
   </footer>
 </template>
-<script>
+<script setup lang="ts">
+import { useData } from 'vitepress'
+const { theme } = useData()
+const { constConfig } = theme.value
 const footerContent = [
   {
     title: '资源',
@@ -55,11 +58,11 @@ const footerContent = [
       },
       {
         text: '工具下载',
-        link: '#'
+        link: constConfig.test
       },
       {
         text: '白皮书',
-        link: '/white-paper-v3.7.pdf'
+        link: constConfig.whitePaper
       }
     ]
   },
@@ -69,19 +72,23 @@ const footerContent = [
     list: [
       {
         text: '社区问答',
-        link: 'https://qa.bfcc.dev/'
+        link: constConfig.qa
       },
       {
-        text: '产品迭代',//--跳转到新增的产品迭代页面
-        link: '#'
+        text: '产品迭代',
+        link: constConfig.test
       },
       {
-        text: '商用授权',//--社区开辟新的页面，存放授权协议材料(市场那边的材料还没备齐，先准备一个路径就好，一般为PDF+一些页面文字内容)
-        link: '#'
+        text: '商用授权协议',
+        link: constConfig.test
       },
       {
-        text: '加入我们',//----------直接跳转到BFChain官网的“加入我们”（官网页面改造中）
-        link: 'https://www.bfchain.org/join'
+        text: '加入我们',
+        link: constConfig.test
+      },
+      {
+        text: '联系我们',
+        link: constConfig.join
       }
     ]
   },
@@ -91,27 +98,27 @@ const footerContent = [
     list: [
       {
         text: 'Github',
-        link: 'https://github.com/BioforestChain/bfcc.dev'
+        link: constConfig.github
       },
       {
         text: 'Twitter',
-        link: '#'
+        link: constConfig.twitter
       },
       {
         text: 'Facebook',
-        link: 'https://www.facebook.com/BFChain-105459620795589'
+        link: constConfig.fb
       },
       {
         text: 'Discord',
-        link: 'https://discord.gg/b5mYEw2USV'
+        link: constConfig.discord
       },
       {
-        text: '微信',//---公众号审批中，预计要明后天才出来
-        link: '#'
+        text: '微信',
+        link: constConfig.weixin
       },
       {
         text: '微博',
-        link: 'https://weibo.com/u/7243924626'
+        link: constConfig.weibo
       }
     ]
   },
@@ -134,44 +141,35 @@ const footerContent = [
     type: 'contact',
     list: [
       {
-        text: 'service@bfchain.org',
-        link: 'service@bfchain.org'
+        text: constConfig.contactEmail,
+        link: constConfig.contactEmail
       }
     ]
   }
 ]
-const IMG_BASE = '/.vitepress/theme/components/imgs';
+const IMG_BASE = '/.vitepress/theme/components/imgs'
 const logos = [
   {
     name: 'Github',
     img_url: `${IMG_BASE}/icon_github.png`,
-    link: '#'
-
+    link: constConfig.test
   },
   {
     name: 'Twitter',
     img_url: `${IMG_BASE}/icon_twitter.png`,
-    link: '#'
+    link: constConfig.test
   },
   {
     name: 'weixin',
     img_url: `${IMG_BASE}/icon_weixin.png`,
-    link: '#'
+    link: constConfig.test
   },
   {
     name: 'weibo',
     img_url: `${IMG_BASE}/icon_weibo.png`,
-    link: '#'
+    link: constConfig.test
   }
 ]
-export default {
-  data () {
-    return {
-      footerContent: footerContent,
-      logos: logos
-    }
-  }
-}
 </script>
 <style scoped>
 /* -----main global end------- */
@@ -216,9 +214,9 @@ footer {
   margin-top: 12px;
   font-size: 14px;
 }
-.list-item > a{
-    color: #fff;
-    text-decoration: none;
+.list-item > a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer-bottom {

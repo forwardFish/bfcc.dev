@@ -76,7 +76,7 @@
         <td>200G</td>
       </tr>
     </table>
-    <h4>BFChain私有数据版(私有链) - BCF节点软件(V 3.6.60)</h4>
+    <!-- <h4>BFChain私有数据版(私有链) - BCF节点软件(V 3.6.60)</h4>
     <table>
       <tr>
         <th width="256px">操作系统</th>
@@ -125,7 +125,7 @@
         </td>
         <td><a href="/download/union/windows.html">查看所有版本</a></td>
       </tr>
-    </table>
+    </table> -->
   </main>
   <block-footer />
 </template>
