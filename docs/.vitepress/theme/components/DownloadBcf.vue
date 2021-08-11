@@ -147,7 +147,7 @@ const slideItems = [
     linkIcon: downIcon,
     title: 'BFChain生物链林节点软件BCF',
     desc: `使用BFChain 节点软件 - BCF 即可轻松加入BFChain网络，构建PC全节点，
-甚至创建您想要的区块链。`
+甚至创建您想要的区块链`
   }
 ]
 </script>
