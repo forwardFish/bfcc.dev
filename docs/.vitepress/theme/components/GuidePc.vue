@@ -121,28 +121,28 @@ const steps = [
     name:'节点配置修改',
     en:'INSTALL',
     desc:'修改节点创世块信息(外部创世块/BFChain)以及节点网络环境(正式/测试)等配置参数',
-    img:`${IMG_BASE}/step_02.png`
+    img:`${IMG_BASE}/step_03.png`
   },
   {
     index:4,
     name:'节点身份绑定',
     en:'NODE',
     desc:'节点启动后，需要为节点绑定一个身份地址（普通地址或受托人地址）',
-    img:`${IMG_BASE}/step_03.png`
+    img:`${IMG_BASE}/step_04.png`
   },
   {
     index:5,
     name:'节点运行',
     en:'OPERATION',
     desc:'节点身份绑定后，则节点成功运行，届时节点可进行区块同步、锻造等',
-    img:`${IMG_BASE}/step_04.png`
+    img:`${IMG_BASE}/step_05.png`
   },
   {
     index:6,
     name:'节点管理',
     en:'MANAGEMENT',
     desc:'通过命令行或者节点管理器(若加入BFChain网络)管理节点',
-    img:`${IMG_BASE}/step_05.png`
+    img:`${IMG_BASE}/step_06.png`
   },
 ]
 
@@ -309,6 +309,7 @@ const guides = [
   padding-left: 28px;
   padding-bottom: 28px;
   margin-bottom: 10px;
+  transition: all 0.7s;
 }
 
 .name{
@@ -319,6 +320,7 @@ const guides = [
   width: 20px;
   height: 20px;
   background: url('./imgs/icon_linux_nor.png');
+  transition: all 0.7s;
 }
 
 .way-linux:hover .icon{
@@ -353,6 +355,7 @@ const guides = [
   font-weight:bold;
   color: #131313;
   margin-left: 4px;
+  transition: all 0.7s;
 }
 
 .action{
@@ -386,6 +389,7 @@ const guides = [
 
 .guide{
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .guide .name{

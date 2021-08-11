@@ -181,7 +181,7 @@ export default {
 /* -----main global end------- */
 
 footer {
-  background-color: #4a78f7;
+  background-color: #162347;
   color: #fff;
   display: flex;
   margin-top: 40px;
