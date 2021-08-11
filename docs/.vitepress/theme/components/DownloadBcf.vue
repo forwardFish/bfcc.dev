@@ -29,9 +29,7 @@
       <div class="text">
         <h2>BFChain可信数据版(联盟链)</h2>
         <h3>BCF 节点软件</h3>
-        <p>
-          数据存证、数据交互与共享 为组织/企业之间构建信用联盟
-        </p>
+        <p>数据存证、数据交互与共享<br />为组织/企业之间构建信用联盟</p>
         <div class="balance-color-box"></div>
       </div>
     </div>
