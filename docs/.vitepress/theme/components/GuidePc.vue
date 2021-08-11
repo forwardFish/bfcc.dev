@@ -119,7 +119,7 @@ const steps = [
   {
     index:3,
     name:'节点配置修改',
-    en:'INSTALL',
+    en:'MODIFICATION',
     desc:'修改节点创世块信息(外部创世块/BFChain)以及节点网络环境(正式/测试)等配置参数',
     img:`${IMG_BASE}/step_03.png`
   },

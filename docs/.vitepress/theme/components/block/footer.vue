@@ -12,14 +12,24 @@
         >
           <div class="content-item-title">{{ contentItem.title }}</div>
           <div class="list-item" v-for="item in contentItem.list" :key="item">
-            <a :href="item.link">{{ item.text }}</a>
+            <a v-if="item.isInner" :href="item.link">{{ item.text }}</a>
+            <span v-else-if="item.isText">{{item.text}}</span>
+            <span v-else-if="item.isQRcode" class="QR-code-container">
+              <span>{{item.text}}</span>
+              <div class="QR-code"></div>
+            </span>
+            <a v-else :href="item.link" target=_blank>{{ item.text }}</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="logos">
           <div class="logo" v-for="logo in logos">
-            <a :href="logo.link" rel="noopener noreferrer">
+            <span v-if="logo.isQRcode" class="QR-code-container">
+              <img :src="logo.img_url" alt="logo" />
+              <div class="QR-code"></div>
+            </span>
+            <a v-else :href="logo.link" rel="noopener noreferrer">
               <img :src="logo.img_url" alt="logo" />
             </a>
           </div>
@@ -41,18 +51,22 @@ const footerContent = [
     type: 'source',
     list: [
       {
+        isInner: true,
         text: 'BFSystem',
         link: '/guide/bfs/index.html'
       },
       {
+        isInner: true,
         text: 'PC全节点',
         link: '/guide/pc/index.html'
       },
       {
+        isInner: true,
         text: '知识库',
         link: '/knowledge/01.html'
       },
       {
+        isInner: true,
         text: 'API参考',
         link: '/api/pc/1-0.html'
       },
@@ -113,6 +127,7 @@ const footerContent = [
         link: constConfig.discord
       },
       {
+        isQRcode:true,
         text: '微信',
         link: constConfig.weixin
       },
@@ -141,6 +156,7 @@ const footerContent = [
     type: 'contact',
     list: [
       {
+        isText:true,
         text: constConfig.contactEmail,
         link: constConfig.contactEmail
       }
@@ -152,22 +168,23 @@ const logos = [
   {
     name: 'Github',
     img_url: `${IMG_BASE}/icon_github.png`,
-    link: constConfig.test
+    link: constConfig.github
   },
   {
     name: 'Twitter',
     img_url: `${IMG_BASE}/icon_twitter.png`,
-    link: constConfig.test
+    link: constConfig.twitter
   },
   {
+    isQRcode:true,
     name: 'weixin',
     img_url: `${IMG_BASE}/icon_weixin.png`,
-    link: constConfig.test
+    link: constConfig.weixin
   },
   {
     name: 'weibo',
     img_url: `${IMG_BASE}/icon_weibo.png`,
-    link: constConfig.test
+    link: constConfig.weibo
   }
 ]
 </script>
@@ -231,5 +248,38 @@ footer {
 }
 .logo {
   margin-right: 20px;
+}
+
+.QR-code-container{
+  position: relative;
+  cursor: pointer;
+}
+
+.QR-code{
+  width: 120px;
+  height: 120px;
+  background: url("../imgs/weixin_qrcode.png");
+  background-size: 100%;	
+  position: absolute;
+  left: 150%;
+  top: -300%;
+  display: none;
+}
+
+.QR-code::before{
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  right: 100%;
+  position: absolute;
+  width: 0;
+  border-width: 12px;
+  border-right: 12px solid #fff;
+  top: 45%;
+}
+
+
+.QR-code-container:hover .QR-code{	
+    display: block;
 }
 </style>
