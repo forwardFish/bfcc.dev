@@ -177,7 +177,7 @@ const slideItems = [
   },
   {
     img: bannerImg2,
-    href: 'https://bfcc.dev/white-paper-v3.7.pdf',
+    href: 'https://developer.bfchain.com/white-paper-v3.7.pdf',
     linkText: '前往查看',
     title: 'BFChain生物链林白皮书',
     desc: '全球首款移动端共识公有链，新数字时代的通用型基础设施'
