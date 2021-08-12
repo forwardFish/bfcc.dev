@@ -75,10 +75,10 @@ const footerContent = [
         text: 'API参考',
         link: '/api/pc/1-0.html'
       },
-      {
-        text: '工具下载',
-        link: constConfig.test
-      },
+      // {
+      //   text: '工具下载',
+      //   link: constConfig.test
+      // },
       {
         text: '白皮书',
         link: constConfig.whitePaper
@@ -104,11 +104,11 @@ const footerContent = [
       {
         text: '加入我们',
         link: constConfig.join
-      },
-      {
-        text: '联系我们',
-        link: '/misc/contact.html'
       }
+      // {
+      //   text: '联系我们',
+      //   link: '/misc/contact.html'
+      // }
     ]
   },
   {
