@@ -164,7 +164,7 @@ const slideItems = [
     href: '#1',
     isCenter: true,
     title: 'BFChain生物链林开发者社区',
-    desc: '为开发者提供全方位服务和工具，帮助构建区块链生态体系。'
+    desc: '为开发者提供全方位服务和工具，帮助构建区块链生态体系'
   },
 
   {

@@ -13,12 +13,12 @@
           <div class="content-item-title">{{ contentItem.title }}</div>
           <div class="list-item" v-for="item in contentItem.list" :key="item">
             <a v-if="item.isInner" :href="item.link">{{ item.text }}</a>
-            <span v-else-if="item.isText">{{item.text}}</span>
+            <span v-else-if="item.isText">{{ item.text }}</span>
             <span v-else-if="item.isQRcode" class="QR-code-container">
-              <span>{{item.text}}</span>
+              <span>{{ item.text }}</span>
               <div class="QR-code"></div>
             </span>
-            <a v-else :href="item.link" target=_blank>{{ item.text }}</a>
+            <a v-else :href="item.link" target="_blank">{{ item.text }}</a>
           </div>
         </div>
       </div>
@@ -29,7 +29,12 @@
               <img :src="logo.img_url" alt="logo" />
               <div class="QR-code"></div>
             </span>
-            <a v-else :href="logo.link" target="_blank" rel="noopener noreferrer">
+            <a
+              v-else
+              :href="logo.link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img :src="logo.img_url" alt="logo" />
             </a>
           </div>
@@ -94,7 +99,7 @@ const footerContent = [
       },
       {
         text: '商用授权协议',
-        link: constConfig.test
+        link: '/misc/commercial-license-agreement.html'
       },
       {
         text: '加入我们',
@@ -102,7 +107,7 @@ const footerContent = [
       },
       {
         text: '联系我们',
-        link: constConfig.join
+        link: '/misc/contact.html'
       }
     ]
   },
@@ -127,7 +132,7 @@ const footerContent = [
         link: constConfig.discord
       },
       {
-        isQRcode:true,
+        isQRcode: true,
         text: '微信',
         link: constConfig.weixin
       },
@@ -156,7 +161,7 @@ const footerContent = [
     type: 'contact',
     list: [
       {
-        isText:true,
+        isText: true,
         text: constConfig.contactEmail,
         link: constConfig.contactEmail
       }
@@ -176,7 +181,7 @@ const logos = [
     link: constConfig.twitter
   },
   {
-    isQRcode:true,
+    isQRcode: true,
     name: 'weixin',
     img_url: `${IMG_BASE}/icon_weixin.png`,
     link: constConfig.weixin
@@ -250,23 +255,23 @@ footer {
   margin-right: 20px;
 }
 
-.QR-code-container{
+.QR-code-container {
   position: relative;
   cursor: pointer;
 }
 
-.QR-code{
+.QR-code {
   width: 120px;
   height: 120px;
-  background: url("../imgs/weixin_qrcode.png");
-  background-size: 100%;	
+  background: url('../imgs/weixin_qrcode.png');
+  background-size: 100%;
   position: absolute;
   left: 150%;
   top: -300%;
   display: none;
 }
 
-.QR-code::before{
+.QR-code::before {
   border: solid transparent;
   content: ' ';
   height: 0;
@@ -278,8 +283,7 @@ footer {
   top: 45%;
 }
 
-
-.QR-code-container:hover .QR-code{	
-    display: block;
+.QR-code-container:hover .QR-code {
+  display: block;
 }
 </style>
