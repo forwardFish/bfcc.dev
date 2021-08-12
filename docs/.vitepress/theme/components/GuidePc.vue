@@ -346,7 +346,7 @@ const guides = [
 }
 
 .build_chain_step{
-  height: 290px;
+  height: 267px;
   overflow: hidden;
 }
 .build_chain_step .step-img{
