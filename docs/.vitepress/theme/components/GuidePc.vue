@@ -1,48 +1,7 @@
 <template>
   <block-carousel class="top-carsousel" :slides="slideItems" />
   <div class="content">
-    <div class="build-chain">
-      <div class="title-section">
-        <div class="title">构建一条区块链</div>
-        <div class="sub-title">步骤概览</div>
-      </div>
-      <div class="steps-section">
-        <div class="step build_chain_step" v-for="build_chain_step in build_chain_steps" :key="build_chain_step">
-          <div class="step-img">
-            <img :src="build_chain_step.img" :alt="'步骤'+build_chain_step.index">
-          </div>
-          <div class="step-name">
-            {{build_chain_step.name}}
-          </div>
-          <!-- <div class="step-name-en">
-              {{build_chain_step.en}}
-            </div> -->
-          <div class="step-desc">{{build_chain_step.desc}}</div>
-          <div class="step-index">0{{build_chain_step.index}}</div>
-        </div>
-      </div>
-    </div>
-    <div class="run-node-pc">
-      <div class="title-section">
-        <div class="title">运行一个PC全节点</div>
-        <div class="sub-title">运行六部曲</div>
-      </div>
-      <div class="steps-section">
-        <div class="step" v-for="step in steps" :key="step">
-          <div class="step-img">
-            <img :src="step.img" :alt="'步骤'+step.index">
-          </div>
-          <div class="step-name">
-            {{step.name}}
-          </div>
-          <div class="step-name-en">
-              {{step.en}}
-            </div>
-          <div class="step-desc">{{step.desc}}</div>
-          <div class="step-index">0{{step.index}}</div>
-        </div>
-      </div>
-      <div class="try-section">
+    <div class="try-section">
         <!-- <div class="run-way-item" v-for="way in run_ways" :key="way">
           <div class="name">
             <div class="icon"><img :src="way.icon" :alt="way.name"></div>
@@ -52,16 +11,7 @@
             {{way.desc}}
           </div>
         </div> -->
-        <div class="run-way-item way-linux">
-          <div class="name">
-            <div class="icon icon-linux"></div>
-            <div class="name-text">Linux环境运行PC全节点</div>
-          </div>
-          <div class="run-desc">
-            通过教程指南，快速搭建BFChain PC全节点所需的Linux环境，并成功在您的本地运行该节点。
-          </div>
-          <button class="action">现在去试</button>
-        </div>
+       
         <div class="run-way-item way-windows">
           <div class="name">
             <div class="icon icon-windows"></div>
@@ -70,7 +20,21 @@
           <div class="run-desc">
             通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。
           </div>
-          <button class="action disabled" >即将上线</button>
+          <a href="/guide/pc/windows/index.html">
+            <button class="action">现在去试</button>
+          </a>
+        </div>
+         <div class="run-way-item way-linux">
+          <div class="name">
+            <div class="icon icon-linux"></div>
+            <div class="name-text">Linux环境运行PC全节点</div>
+          </div>
+          <div class="run-desc">
+            通过教程指南，快速搭建BFChain PC全节点所需的Linux环境，并成功在您的本地运行该节点。
+          </div>
+          <a href="/guide/pc/linux/index.html">
+            <button class="action">现在去试</button>
+          </a>
         </div>
         <div class="run-way-item way-mac">
           <div class="name">
@@ -83,6 +47,67 @@
           <button class="action disabled" >即将上线</button>
         </div>
       </div>
+    <div class="build-chain">
+      <div class="title-section">
+        <div class="title">构建一条区块链</div>
+        <div class="sub-title">步骤概览</div>
+      </div>
+      
+      <div class="build-chain-steps-section">
+        <div class="step_line build_chain_step_line1">
+          <div class="build_chain_step" v-for="build_chain_step in build_chain_steps_line1" :key="build_chain_step">
+            <div class="step-img">
+              <img v-if="build_chain_step.img" :src="build_chain_step.img" :alt="'步骤'+build_chain_step.index">
+            </div>
+            <div class="step-name">
+              {{build_chain_step.name}}
+            </div>
+            <!-- <div class="step-name-en">
+                {{build_chain_step.en}}
+              </div> -->
+            <div class="step-desc">{{build_chain_step.desc}}</div>
+            <!-- <div class="step-index">0{{build_chain_step.index}}</div> -->
+          </div>
+        </div>
+        <div class="step_line build_chain_step_line2">
+          <div class="build_chain_step" v-for="build_chain_step in build_chain_steps_line2" :key="build_chain_step">
+            <div class="step-img">
+              <img v-if="build_chain_step.img" :src="build_chain_step.img" :alt="'步骤'+build_chain_step.index">
+            </div>
+            <div class="step-name">
+              {{build_chain_step.name}}
+            </div>
+            <!-- <div class="step-name-en">
+                {{build_chain_step.en}}
+              </div> -->
+            <div class="step-desc">{{build_chain_step.desc}}</div>
+            <!-- <div class="step-index">0{{build_chain_step.index}}</div> -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="run-node-pc">
+      <div class="title-section">
+        <div class="title">运行一个PC全节点</div>
+        <div class="sub-title">步骤概览</div>
+      </div>
+      
+      <div class="steps-section">
+        <div class="step" v-for="step in steps" :key="step">
+          <div class="step-img">
+            <img :src="step.img" :alt="'步骤'+step.index">
+          </div>
+          <div class="step-name">
+            {{step.name}}
+          </div>
+          <div class="step-name-en">
+              {{step.en}}
+            </div>
+          <div class="step-desc">{{step.desc}}</div>
+        </div>
+      </div>
+      
     </div>
     <div class="quick-guide">
       <div class="title-section">
@@ -98,7 +123,9 @@
           <div class="guide-desc">
             {{guide.desc}}
           </div>
-          <button class="action" >前往阅读</button>
+          <a :href="guide.link" class="action-container">
+            <button class="action">前往阅读</button>
+          </a>
         </div>
       </div>
     </div>
@@ -140,7 +167,7 @@ let t = `
 7.节点管理
 通过命令行窗口交互的方式管理节点
 `
-const build_chain_steps = [
+const build_chain_steps_line1 = [
   {
     index:1,
     name:'BCF节点安装',
@@ -169,6 +196,10 @@ const build_chain_steps = [
     desc:'根据部署方式(公有链/私有链/联盟链)配置防火墙',
     img:`${IMG_BASE}/build_step_04.png`
   },
+]
+
+const build_chain_steps_line2 = [
+
   {
     index:5,
     name:'节点身份绑定',
@@ -190,6 +221,13 @@ const build_chain_steps = [
     desc:'通过命令行或者节点管理器(若加入BFChain网络)管理节点',
     img:`${IMG_BASE}/build_step_07.png`
   },
+  {
+    // index:7,
+    // name:'节点管理',
+    // en:'MANAGEMENT',
+    // desc:'通过命令行或者节点管理器(若加入BFChain网络)管理节点',
+    // img:`${IMG_BASE}/build_step_07.png`
+  }
 ]
 
 const steps = [
@@ -261,27 +299,32 @@ const run_ways = [
 const guides = [
   {
     name:'如何成为区块锻造者',
-    desc:'通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。'
+    desc:'区块锻造者，即矿工，负责BFChain网络的区块锻造。BFChain网络将在当前轮时通过链上投票治理的方式选举出下一轮的57位区块锻造者。'
   },
   {
     name:'如何参与链上投票治理',
-    desc:'通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。'
+    desc:`投票治理是BFChain网络为链上所有节点提供的参与链上治理的一种方式。节点参与链上投票治理，就有机会获得一定的权益奖励。`
   },
   {
-    name:'如何管理矿机',
-    desc:'通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。'
+    name:'如何管理节点',
+    desc:'用户可以通过命令窗口或者节点管理器管理节点，包括但不限于：节点状态管理、节点区块同步、节点锻造信息、节点更新及重启等等'
   },
   {
     name:'如何获得链上激励',
-    desc:'通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。'
+    desc:`节点参与链上治理后就有机会获得权益奖励。
+          奖励包括：
+          1.区块锻造奖励
+          2.链上投票治理奖励`
   },
   {
-    name:'如何获取链上激励',
-    desc:'通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。'
-  },
-  {
+    link:'/guide/pc/windows/faq.html',
     name:'常见问题',
-    desc:'通过教程指南，快速搭建BFChain PC全节点所需的Windows环境，并成功在您的本地运行该节点。'
+    desc:'一些常见问题的汇总，在这里您可以找到一些问题的解决方法。'
+  },
+  {
+    link:'/guide/pc/windows/glossary.html',
+    name:'词汇表',
+    desc:'BFChain生态名词释义。'
   },
 ]
 </script>
@@ -295,7 +338,7 @@ const guides = [
   flex-direction: column;
   justify-content: space-between;
 }
-.run-node-pc,.quick-guide{
+.build-chain,.run-node-pc,.quick-guide{
   padding: 60px 0;
 }
 .title-section,.steps-section,.try-section{
@@ -332,6 +375,15 @@ const guides = [
 
 
 /*step section begin*/
+.build-chain-steps-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.step_line{
+  display: flex;
+  justify-content: space-between;
+}
 
 .step{
   position: relative;
@@ -346,11 +398,22 @@ const guides = [
 }
 
 .build_chain_step{
-  height: 267px;
+  width: 248px;
+  height: 180px;
   overflow: hidden;
 }
 .build_chain_step .step-img{
   position: absolute;
+}
+
+.build_chain_step .step-name{
+  margin: 24px;
+  margin-bottom: 12px;
+}
+
+.build_chain_step .step-desc{
+  padding-left: 24px;
+  padding-right: 50px;
 }
 
 .step-name{
@@ -380,7 +443,7 @@ const guides = [
   text-align: justify;
 }
 
-.step-index{    
+/* .step-index{    
   position: absolute;
   opacity: 0.1;
   font-family: Roboto-BlackItalic;
@@ -392,16 +455,17 @@ const guides = [
   right: 20px;
   bottom: 12px;
   z-index: -1;
-}
+} */
 
 /**run-ways begin**/
 .try-section{
-  margin-top: 36px;
+  /* margin-top: 36px; */
 }
-.run-way-item,.guide{
+.run-way-item,.guide,.step{
   display: flex;
   flex-direction: column;
   width: 32.5%;
+  max-height: 260px;
   background: #FFFFFF;
   border: 1px solid #E6E6E6;
   padding: 32px;
@@ -480,13 +544,16 @@ const guides = [
 
 /**guide begin**/
 
-.guides-section{
+.guides-section, .steps-section{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .guide{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
 }
@@ -510,4 +577,5 @@ const guides = [
   padding: 6px 27px;
   color: #4A78F7;
 }
+
 </style>
