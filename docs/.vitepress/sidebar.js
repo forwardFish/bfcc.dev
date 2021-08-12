@@ -92,18 +92,18 @@ module.exports = {
       ]
     }
   ],
-  '/misc/': [
-    {
-      text: '其他',
-      children: [
-        {
-          text: '商用授权协议',
-          link: '/misc/commercial-license-agreement.html'
-        },
-        { text: '联系方式', link: '/misc/contact.html' }
-      ]
-    }
-  ],
+  // '/misc/': [
+  //   {
+  //     text: '其他',
+  //     children: [
+  //       {
+  //         text: '商用授权协议',
+  //         link: '/misc/commercial-license-agreement.html'
+  //       },
+  //       { text: '联系方式', link: '/misc/contact.html' }
+  //     ]
+  //   }
+  // ],
   '/knowledge/': [
     {
       text: '知识库',
