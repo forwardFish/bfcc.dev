@@ -95,7 +95,7 @@ const footerContent = [
       },
       {
         text: '产品迭代',
-        link: constConfig.test
+        link: constConfig.productUpdate
       },
       {
         text: '商用授权',
@@ -103,8 +103,8 @@ const footerContent = [
       },
       {
         text: '加入我们',
-        link: constConfig.test
-      },
+        link: constConfig.join
+      }
       // {
       //   text: '联系我们',
       //   link: '/misc/contact.html'
