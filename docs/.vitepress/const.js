@@ -5,6 +5,7 @@ module.exports = {
   bfs: '/api/bfs/bfs.html',
   pc: '/api/pc/1-0.html',
   join: 'https://www.bfchain.org/join',
+  productUpdate: '/download/bcf.html',
   knowledge: '/knowledge/01.html',
   blog: '/blog/index.html',
   github: 'https://github.com/BioforestChain',
