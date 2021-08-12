@@ -16,6 +16,6 @@ license@bfchain.org
 我们将在三个工作日内给您答复。</p>
 
 <p>
-查看 <a href="/commercial-license-agreement.pdf" target="_blank">商用授权协议</a>
+查看BFChain <a href="/commercial-license-agreement.pdf" target="_blank">商用授权协议</a>
 </p>
 <!-- <iframe src="" style="width:100%; height: calc(100vh - var(--header-height));"></iframe> -->
