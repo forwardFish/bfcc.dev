@@ -10,7 +10,7 @@ module.exports = {
   blog: '/blog/index.html',
   github: 'https://github.com/BioforestChain',
   twitter: 'https://twitter.com/BFChain',
-  fb: 'https://www.facebook.com/BFChain-105459620795589',
+  fb: 'https://www.facebook.com/BioforestChain',
   qa: 'https://qa.bfchain.com/',
   discord: 'https://discord.gg/b5mYEw2USV',
   weixin:
