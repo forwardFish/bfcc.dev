@@ -8,25 +8,23 @@
 
 按照下列步骤即可部署单节点：
 
-1. 在单节点上安装生物链林数据中心版节点程序(BCF.exe)；
+1. 在单节点上安装生物链林BCF节点软件；
    
-   按照本文第3章的操作说明完成BCF.exe安装配置，配置成功之后双击BCF.exe可运行节点。若提示未经授权，则根据[\<节点授权申请\>](/guide/pc/windows/install.html#节点授权申请)，完成节点授权后即可运行节点。
-
+   按照本文第3章的操作说明完成BCF安装配置，配置成功之后双击BCF可运行节点。
+   
 2. 切换节点网络环境：请参考[\<配置网络环境\>](/guide/pc/windows/install.html#配置网络环境)；
 
 3. 切换节点运行的链：请参考[\<配置节点运行的链\>](/guide/pc/windows/install.html#配置节点运行的链)；
 
-4. 绑定地址：请参考[\<绑定地址\>](/guide/pc/windows/install.html#绑定地址)。
+4. 节点身份绑定：请参考[\<节点身份绑定\>](/guide/pc/windows/install.html#节点身份绑定)。
 
 以上操作成功之后，就能实现单节点部署。
 
-### 多节点部署
-
-下文将以部署三个节点为例，说明如何在多台节点上部署同一条链的生物链林数据中心版节点程序(BCF.exe)。
+下文将以部署三个节点为例，说明如何在多台节点上部署同一条链的生物链林BCF节点软件。
 
 #### 安装
 
-在三个不同节点（节点IP分别为`192.168.0.1`，`192.168.0.2`，`192.168.0.3`）上按照手册中的安装步骤分别安装BCF.exe。安装成功之后双击BCF.exe可运行节点。若提示未经授权，则根据[\<节点申请授权\>](/guide/pc/windows/install.html#节点授权申请)，完成节点授权后即可运行节点。
+在三个不同节点（节点IP分别为`192.168.0.1`，`192.168.0.2`，`192.168.0.3`）上按照手册中的安装步骤分别安装BCF。安装成功之后双击BCF可运行节点。
 
 #### 配置
 
@@ -44,145 +42,17 @@
    
    ![](./media/b1a01d19c2df459055cbdffbb66e6df6.png)
 
-4. 绑定地址：请参考[\<绑定地址\>](/guide/pc/windows/install.html#绑定地址)。
+4. 节点身份绑定：请参考[\<节点身份绑定\>](/guide/pc/windows/install.html#节点身份绑定)。
 
 > 注1：部署三个节点，所以每轮至少需要3个区块，至少这里需要设置3个受托人。我们推荐每轮57个区块，114个受托人；
 
 > 注2：创世块可以由一台节点创建，然后将创世块拷贝到节点安装目录的`genesisInfos`文件夹下，并且按照上述步骤修改配置文件方可运行；
 
-> 注3：运行非BFChain的链需要进行区块链授权，详情请见\<[区块链授权](/guide/pc/windows/install.html#区块链授权申请)\>。
+> 注3：运行非BFChain的链需要向生物链林团队申请创世块，详情请见\<[创世块申请](/guide/pc/windows/install.html#创世块申请)\>。
 
 #### 运行
 
 完成以上配置后，即可实现多节点部署。
-
-### 大规模部署
-
-#### 节点服务器环境准备
-
-以`centos`系统为例的批量部署10台节点。需要先准备一台管理服务器，通过该管理服务器下发配置命令至各节点服务器进行配置操作。
-
-1. 配置管理服务器（管理服务器能ssh登录至各节点服务器）：
-   
-   1. 创建相关目录：
-      
-      ```shell
-       mkdir -p /data/ansible_dir
-      
-       mkdir -p /data/key
-      
-       mkdir -p /data/release
-      
-       mkdir -p /data/scripts
-      ```
-   
-   2. 安装自动化运维工具aisible：
-      ```shell
-       yum –y install ansible
-      ```
-   
-   3. 配置python运行环境
-      ```shell
-       yum -y install python-pip
-      
-       pip install paramiko multiprocessing
-      ```
-   
-   4. 上传节点服务器配置脚本到管理服务器目录/data/ansible_dir并解压：
-      ```shell
-       unzip os_initial.zip
-      ```
-      
-      > 注：服务器配置脚本见文档附件中的os_initial.zip
-   
-   5. 生成秘钥对：
-      ```shell
-       ssh-keygen -t rsa
-      ```
-      
-      ![](./media/870559d372ca4275eeddc2dbe12f4cc9.png)
-   
-   6. 将公钥id_rsa.pub黏贴至：
-      
-      ` /data/ansible_dir/os_initial/roles/set_sshd/files/public_keys/ops`
-      
-      ```shell
-      mv id_rsa.pub /data/ansible_dir/os_initial/roles/set_sshd/files/public_keys/ops/id_rsa.pub
-      ```
-   
-   7. 将私钥文件拷贝至目录 `/data/key/ mv id_rsa /data/key/id_rsa`
-   
-   8. 修改文档附件中的cmd.py中的username、port、key为实际值，分别表示登录节点服务器的用户名、端口，以及所用的私钥的路径,并上传至管理机目录/data/scripts/中
-   
-   9. 创建文件`/data/scripts/ip.txt`（节点服务器公网,私网ip）如下：
-      
-      ![](./media/46423eebd0cdedb3578a4603ce1ec165.png)
-   
-   10. 创建管理服务器对各节点服务器ssh登录的信息文件`/data/ansible_dir/bfchainnodehosts`：
-   
-   示例含义如下：
-   
-   | [bfchainnode]                | 组名                    |
-   |:---------------------------- | --------------------- |
-   | `ansible_ssh_port`             | 管理机连接节点的ssh登录端口       |
-   | `ansible_ssh_user`             | 登录管理机连接节点的用户名         |
-   | `ansible_become`               | 激活权限提升(有时候需要使用root用户) |
-   | `ansible_become_user`          | 设置为具有所需权限的用户          |
-   | `ansible_become_pass`          | 这个用户的密码               |
-   | `ansible_ssh_private_key_file` | 私钥的路径                 |
-   
-   ![](./media/9c40169421c2fcec1b35a401e9ce7520.png)
-
-2. 配置节点服务器
-   
-   1. 修改`/data/ansible_dir/os_initial/default.hosts`文件，,配置节点服务器ip及登录方式：
-   
-      ![](./media/717cf392f1dd8844918dc8e0be18ec11.png)
-   
-   2. 运行脚本配置节点服务器运行环境：
-   
-   ```bash
-   ansible-playbook /data/ansible_dir/os_initial/default.hosts/os_initial.yml -i
-   /data/ansible_dir/os_initial/default.hosts
-   ```
-
-#### 节点服务器部署BFChain包
-
-1. 将已经安装好的节点压缩成.zip压缩包。
-
-2. 上传发布包BFChain.zip至管理服务器目录：`/data/release/bfchain.zip`
-
-3. 分发BFChain发布包至各节点服务器：
-   
-   ```
-   ansible bfchainnode -i /data/ansible_dir/bfchainnodehosts -m copy -a
-   "src=/data/release/bfchain.zip dest=/data/release/bfchain.zip"
-   ```
-
-4. 运行节点服务器部署脚本：
-   
-   ```python
-   python /data/scripts/cmd.py "sudo sh /data/scripts/update_bfchain.sh"
-   ```
-
-5. 批量启动节点
-   
-   ```
-   ansible bfchainnode -m shell -i /data/ansible_dir/bfchainnodehosts -a
-   'systemctl start supervisord '
-   ```
-
-#### 批量管理/执行节点命令
-
-通过调用`ansible`批量在节点执行`command`命令。如下：
-
-```
-ansible bfchainnode -m shell -i /data/ansible_dir/bfchainnodehosts -a 'command'
-```
-
-> 注: `command`为要执行的命令
-
-例如批量执行 `–glb`，命令输入如下操作即可获得。
 
 ### 多条链部署
 
@@ -214,7 +84,7 @@ ansible bfchainnode -m shell -i /data/ansible_dir/bfchainnodehosts -a 'command'
 
 ### 联盟链部署
 
-1. 需要联系生物链林BCF团队申请联盟链的创世块。
+1. 需要联系生物链林团队申请联盟链的创世块。
 
 2. 联盟链的准入权限在部署网络时管理，区块链上不管理接入权限。
 
@@ -226,7 +96,7 @@ ansible bfchainnode -m shell -i /data/ansible_dir/bfchainnodehosts -a 'command'
 
 ### 私有链部署
 
-1. 需要联系生物链林BCF团队申请私有链的创世块。
+1. 需要联系生物链林团队申请私有链的创世块。
 
 2. 按照\<[单节点部署](/guide/pc/windows/deploy.html#单节点部署)\>步骤使用私有链创世块部署节点，这样运行节点时则可以启动私有链。
 
@@ -234,34 +104,5 @@ ansible bfchainnode -m shell -i /data/ansible_dir/bfchainnodehosts -a 'command'
 
 4. 在私有链上重置区块链。见\<[区块链数据重置](/guide/pc/windows/faq.html#区块链数据重置)\>。如果有多个节点，需要在每个节点上都重置。
 
-## 启停区块
-
-### 绑定单个地址
-
-详情请参考[\<绑定地址\>](/guide/pc/windows/install.html#绑定地址)。
-
-### 批量绑定地址
-
-1. 参考\<[节点服务器环境准备](/guide/pc/windows/deploy.html#节点服务器环境准备)\>，将bandkeyhosts文件上传至管理服务器的/data/ansible_dir/bandkeyhosts参照下列表格配置相应的值。
-
-| bfchainnode001                              | 别名                     |
-| ------------------------------------------- | ---------------------- |
-| `ansible_ssh_port=18899`                      | 节点登录ssh端口号             |
-| `ansible_ssh_host=192.168.0.1`                | 节点可ssh登陆的内网ip          |
-| `ansible_ssh_user=user1`                      | 节点以该用户ssh登录            |
-| `ansible_become=true`                        | 是否启用 sudo 权限           |
-| `ansible_become_user=root`                    | 切换sudo后执行命令使用的用户       |
-| `ansible_become_pass=''`                      | 切换sudo使用的密码（单引号里面输入密码） |
-| `ansible_ssh_private_key_file=/data/key/key1` | ssh登录使用的秘钥文件           |
-| `secretkey`                                   | 节点绑定的委托人秘钥（单引号里面输入秘钥）  |
-
-2. 在管理机中输入如下命令，可批量绑定受托人：
-   ```shell
-   ansible bandnode -i /data/ansible_dir/bandkeyhosts -m shell -a "cd
-   /data/bfchain; ./bcf --bindingAccount
-   
-   systemSecret=\\"你的节点密码\\",delegateSecret=\\"{{secretkey}}\\" "
-   ```
 
 
-  ![](./media/acbe7460f991881fb5fdf7022b5a24ec.png)
