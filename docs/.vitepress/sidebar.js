@@ -3,6 +3,7 @@ module.exports = {
     { text: '教程简介', link: '/guide/pc/windows/index.html' },
     { text: '安装运行', link: '/guide/pc/windows/install.html' },
     { text: '节点部署', link: '/guide/pc/windows/deploy.html' },
+    { text: '节点管理', link: '/guide/pc/windows/manager.html' },
     { text: '常见问题', link: '/guide/pc/windows/faq.html' },
     { text: '名词解释', link: '/guide/pc/windows/glossary.html' }
   ],
@@ -10,7 +11,8 @@ module.exports = {
     { text: '教程简介', link: '/guide/pc/linux/index.html' },
     { text: '搭建Linux环境', link: '/guide/pc/linux/env-install.html' },
     { text: '节点部署', link: '/guide/pc/linux/deploy.html' },
-    { text: '节点授权与配置', link: '/guide/pc/linux/authorize.html' }
+    { text: '节点身份绑定', link: '/guide/pc/linux/authorize.html' },
+    { text: '节点管理', link: '/guide/pc/linux/manager.html' }
   ],
 
   '/download/': [
